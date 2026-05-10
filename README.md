@@ -1,4 +1,4 @@
-# PaulaAlessandra.dev — Portfolio v2
+# PaulaAlessandra.dev — Portfolio
 
 Portfolio pessoal desenvolvido com foco em performance, design moderno e stack real de produção.
 
