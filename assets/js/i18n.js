@@ -50,9 +50,9 @@ const translations = {
     'exp.job1-company': 'Projetos Independentes',
     'exp.job1-desc':    'PHP, Java/Spring Boot, MySQL e JavaScript. 35+ projetos: gamificação, dashboards, APIs, pagamentos, UX/UI.',
     'exp.job2-period':  '2025 – Atualmente',
-    'exp.job2-title':   'Suporte Técnico N1 – Service Desk',
+    'exp.job2-title':   'Suporte Técnico – Service Desk',
     'exp.job2-desc':    'Triagem de chamados e apoio em diagnósticos.',
-    'exp.job3-title':   'Suporte Técnico N1 – Helpdesk',
+    'exp.job3-title':   'Suporte Técnico – Helpdesk',
     'exp.job4-title':   'Analista de Atendimento',
     'exp.job5-title':   'Desenhista Projetista / Técnico de Telecom',
 
