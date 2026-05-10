@@ -15,13 +15,8 @@ filterBtns.forEach(btn => {
     btn.classList.add('active');
 
     const filter = btn.dataset.filter;
-
     portItems.forEach(item => {
-      const show = filter === 'all' || item.dataset.category === filter;
-      item.classList.toggle('hidden', !show);
-
-      // Força AOS a mostrar items que estavam fora da viewport quando a página carregou
-      if (show) item.classList.add('aos-animate');
+      item.classList.toggle('hidden', filter !== 'all' && item.dataset.category !== filter);
     });
 
     updateCounter();
