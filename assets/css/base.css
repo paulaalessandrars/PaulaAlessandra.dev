@@ -1,0 +1,159 @@
+/* ============================================================
+   base.css — Design tokens, reset, tipografia, utilitários, botões
+   ============================================================ */
+
+/* ── Design Tokens ─────────────────────────────────────────── */
+:root {
+  --color-primary:     #58a6ff;
+  --color-primary-rgb: 88, 166, 255;
+  --color-accent:      #3fb950;
+  --color-accent-rgb:  63, 185, 80;
+  --color-purple:      #a78bfa;
+
+  --bg-base:           #0a0e1a;
+  --bg-card:           #0f1629;
+  --bg-alt:            #0d1323;
+  --bg-glass:          rgba(15, 22, 41, 0.72);
+  --bg-glass-border:   rgba(88, 166, 255, 0.12);
+
+  --text-primary:      #e6edf3;
+  --text-muted:        #8b949e;
+  --text-heading:      #ffffff;
+
+  --border-subtle:     rgba(255, 255, 255, 0.06);
+  --shadow-glow:       0 0 30px rgba(var(--color-primary-rgb), 0.15);
+  --radius-card:       14px;
+  --radius-sm:         8px;
+  --tr:                0.25s ease;
+}
+
+.light-theme {
+  --bg-base:           #f0f4ff;
+  --bg-card:           #ffffff;
+  --bg-alt:            #e8eef8;
+  --bg-glass:          rgba(255, 255, 255, 0.80);
+  --bg-glass-border:   rgba(88, 166, 255, 0.20);
+  --text-primary:      #1c2333;
+  --text-muted:        #57606a;
+  --text-heading:      #0a0e1a;
+  --border-subtle:     rgba(0, 0, 0, 0.08);
+  --shadow-glow:       0 0 30px rgba(var(--color-primary-rgb), 0.12);
+}
+
+/* ── Reset & base ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Inter', 'Space Grotesk', system-ui, sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  transition: background-color 0.4s, color 0.3s;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--text-heading);
+}
+
+a { text-decoration: none; transition: color var(--tr); }
+img { max-width: 100%; height: auto; }
+
+/* ── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 3px; }
+
+/* ── Utilities ─────────────────────────────────────────────── */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-muted-custom { color: var(--text-muted) !important; }
+.text-highlight    { color: var(--color-primary); }
+.bg-alt            { background-color: var(--bg-alt) !important; }
+.section-pad       { padding: 96px 0; }
+
+.section-label {
+  display: inline-block;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  background: rgba(var(--color-primary-rgb), 0.1);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.25);
+  padding: 4px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* ── Buttons ───────────────────────────────────────────────── */
+.btn-primary-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 28px;
+  background: linear-gradient(135deg, var(--color-primary), #1f6feb);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.92rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform var(--tr), box-shadow var(--tr), filter var(--tr);
+}
+.btn-primary-custom:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(var(--color-primary-rgb), 0.4);
+  filter: brightness(1.1);
+}
+
+.btn-outline-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 28px;
+  background: transparent;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.92rem;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background var(--tr), color var(--tr), transform var(--tr);
+}
+.btn-outline-custom:hover {
+  background: rgba(var(--color-primary-rgb), 0.12);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.btn-sm-custom {
+  padding: 8px 16px !important;
+  font-size: 0.82rem !important;
+}
+
+/* ── Typed cursor ──────────────────────────────────────────── */
+.typed-cursor {
+  color: var(--color-primary);
+  font-weight: 300;
+  animation: blink 0.9s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}

@@ -1,0 +1,363 @@
+/* ============================================================
+   components.css — Sobre, Stack, Timeline, Portfolio, Contato, Modal
+   ============================================================ */
+
+/* ── Sobre ─────────────────────────────────────────────────── */
+.avatar-wrapper {
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-purple));
+  box-shadow: 0 0 40px rgba(var(--color-primary-rgb), 0.25);
+}
+.avatar-img {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.info-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 6px 14px;
+  border-radius: 999px;
+  width: fit-content;
+}
+.info-pill i { color: var(--color-primary); }
+
+.about-feature {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+}
+.about-feature i { color: var(--color-accent); font-size: 1rem; }
+
+/* ── Stack ─────────────────────────────────────────────────── */
+.stack-group-label {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.tech-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 18px 10px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: default;
+  transition: border-color var(--tr), transform var(--tr), box-shadow var(--tr);
+}
+.tech-card:hover {
+  border-color: rgba(var(--color-primary-rgb), 0.4);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(var(--color-primary-rgb), 0.15);
+}
+.tech-card img {
+  width: 40px; height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+.tech-card:hover img { transform: scale(1.12); }
+.tech-card span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.dark-theme  .icon-invert { filter: invert(1) brightness(0.8); }
+.light-theme .icon-invert { filter: none; }
+
+/* ── Timeline / Experiência ────────────────────────────────── */
+.exp-col-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+}
+
+.timeline { position: relative; padding-left: 28px; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, var(--color-primary) 0%, transparent 100%);
+  opacity: 0.25;
+}
+
+.tl-item { position: relative; margin-bottom: 28px; }
+.tl-item:last-child { margin-bottom: 0; }
+
+.tl-dot {
+  position: absolute;
+  left: -24px; top: 4px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--border-subtle);
+  border: 2px solid var(--text-muted);
+}
+.tl-dot-primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 8px rgba(var(--color-primary-rgb), 0.5);
+}
+.tl-dot-accent {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 8px rgba(var(--color-accent-rgb), 0.5);
+}
+
+.tl-content { padding-left: 4px; }
+.tl-featured {
+  background: var(--bg-card);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.2);
+  border-radius: var(--radius-card);
+  padding: 16px;
+}
+
+.tl-period {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.72rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 4px;
+}
+.tl-content h6 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.tl-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: rgba(var(--color-primary-rgb), 0.1);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.2);
+  border-radius: 4px;
+  padding: 2px 8px;
+  display: inline-block;
+}
+
+.cert-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 4px 10px;
+  display: inline-block;
+  transition: border-color var(--tr), color var(--tr);
+}
+.cert-badge:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+/* ── Portfolio / Filtros ───────────────────────────────────── */
+.filtro-btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: background var(--tr), color var(--tr), border-color var(--tr);
+  white-space: nowrap;
+}
+.filtro-btn:hover  { border-color: var(--color-primary); color: var(--color-primary); }
+.filtro-btn.active {
+  background: rgba(var(--color-primary-rgb), 0.12);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 22px;
+  transition: border-color var(--tr), transform var(--tr), box-shadow var(--tr);
+  cursor: default;
+}
+.project-card:hover {
+  border-color: rgba(var(--color-primary-rgb), 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(var(--color-primary-rgb), 0.12);
+}
+
+.project-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+.project-icon { font-size: 1.5rem; line-height: 1; flex-shrink: 0; }
+
+.project-tags { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; }
+
+.ptag {
+  font-size: 0.67rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: rgba(var(--color-primary-rgb), 0.08);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.18);
+  border-radius: 4px;
+  padding: 2px 7px;
+  white-space: nowrap;
+}
+
+.project-card h6 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.project-card .text-muted-custom {
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.portfolio-item { transition: opacity 0.3s, transform 0.3s; }
+.portfolio-item.hidden { display: none !important; }
+
+/* ── Contato ───────────────────────────────────────────────── */
+.contact-info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  height: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.contact-item:last-of-type { border-bottom: none; }
+
+.contact-icon {
+  width: 40px; height: 40px;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(var(--color-primary-rgb), 0.1);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.2);
+  border-radius: 10px;
+  color: var(--color-primary);
+  font-size: 1.05rem;
+}
+.contact-item p a { color: var(--text-primary); transition: color var(--tr); }
+.contact-item p a:hover { color: var(--color-primary); }
+
+.contact-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 32px;
+}
+
+.form-group-custom {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group-custom label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.required { color: #f85149; margin-left: 2px; }
+
+.error-msg {
+  font-size: 0.75rem;
+  color: #f85149;
+  min-height: 16px;
+  display: block;
+}
+
+.form-control-custom {
+  background: var(--bg-base);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  padding: 11px 16px;
+  font-size: 0.9rem;
+  width: 100%;
+  transition: border-color var(--tr), box-shadow var(--tr);
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  resize: none;
+}
+.form-control-custom::placeholder { color: var(--text-muted); }
+.form-control-custom:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.15);
+  background: var(--bg-card);
+}
+.form-control-custom.is-invalid { border-color: #f85149; }
+
+/* ── Modal ─────────────────────────────────────────────────── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1050;
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+
+.modal-box {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: var(--radius-card);
+  padding: 40px 32px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+.modal-icon { font-size: 2.5rem; margin-bottom: 16px; }
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .avatar-wrapper   { width: 175px; height: 175px; }
+  .filtro-btn       { font-size: 0.75rem; padding: 5px 12px; }
+}
+@media (max-width: 480px) {
+  .contact-info-card,
+  .contact-form { padding: 20px; }
+}
