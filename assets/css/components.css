@@ -243,6 +243,79 @@
   line-height: 1.6;
 }
 
+/* ── Featured / Destaques ──────────────────────────────────── */
+.featured-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  transition: border-color var(--tr), transform var(--tr), box-shadow var(--tr);
+  display: flex;
+  flex-direction: column;
+}
+.featured-card:hover {
+  border-color: rgba(var(--color-primary-rgb), 0.45);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(var(--color-primary-rgb), 0.15);
+}
+
+.featured-card-header {
+  padding: 24px 24px 20px;
+  background: linear-gradient(135deg,
+    rgba(var(--color-primary-rgb), 0.12) 0%,
+    rgba(var(--color-purple-rgb, 188, 140, 255), 0.06) 100%);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.featured-card-header--java {
+  background: linear-gradient(135deg,
+    rgba(255, 118, 74, 0.12) 0%,
+    rgba(var(--color-primary-rgb), 0.06) 100%);
+}
+.featured-card-header--pay {
+  background: linear-gradient(135deg,
+    rgba(63, 185, 80, 0.12) 0%,
+    rgba(var(--color-primary-rgb), 0.05) 100%);
+}
+
+.featured-icon-wrap { display: inline-flex; }
+.featured-icon { font-size: 2rem; line-height: 1; }
+
+.featured-card-body { padding: 20px 24px 24px; flex: 1; display: flex; flex-direction: column; }
+.featured-category {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 8px;
+}
+.featured-card-body h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/* ── Bento Portfolio Grid ──────────────────────────────────── */
+#portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.portfolio-item { display: block; }
+.bento-wide { grid-column: span 2; }
+
+@media (max-width: 991px) {
+  #portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .bento-wide    { grid-column: span 2; }
+}
+@media (max-width: 575px) {
+  #portfolio-grid { grid-template-columns: 1fr; }
+  .bento-wide    { grid-column: span 1; }
+}
+
 /* AOS não deve controlar cards individuais do portfólio — o filtro faz isso */
 .portfolio-item {
   opacity: 1 !important;

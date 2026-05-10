@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +24,7 @@
             <span class="brand-bracket">&lt;</span>Paula<span class="brand-dot">.</span>dev<span class="brand-bracket">/&gt;</span>
         </a>
         <div class="d-flex align-items-center gap-2 d-lg-none">
+            <button class="lang-toggle" id="lang-toggle-mobile" aria-label="Switch language"><span class="lang-label">EN</span></button>
             <button class="theme-toggle" id="theme-toggle-mobile" aria-label="Alternar tema">
                 <i class="bi bi-moon-fill" id="icon-moon-mobile"></i>
                 <i class="bi bi-sun-fill d-none" id="icon-sun-mobile"></i>
@@ -34,12 +35,13 @@
         </div>
         <div class="nav-collapse" id="nav-menu">
             <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 mb-3 mb-lg-0">
-                <li class="nav-item"><a href="#sobre"       class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="#sobre"       class="nav-link" data-i18n="nav.about">Sobre</a></li>
                 <li class="nav-item"><a href="#stack"       class="nav-link">Stack</a></li>
-                <li class="nav-item"><a href="#experiencia" class="nav-link">Experiência</a></li>
-                <li class="nav-item"><a href="#portfolio"   class="nav-link">Portfólio</a></li>
-                <li class="nav-item"><a href="#contato"     class="nav-link nav-cta">Contato</a></li>
+                <li class="nav-item"><a href="#experiencia" class="nav-link" data-i18n="nav.experience">Experiência</a></li>
+                <li class="nav-item"><a href="#portfolio"   class="nav-link" data-i18n="nav.portfolio">Portfólio</a></li>
+                <li class="nav-item"><a href="#contato"     class="nav-link nav-cta" data-i18n="nav.contact">Contato</a></li>
             </ul>
+            <button class="lang-toggle d-none d-lg-flex" id="lang-toggle" aria-label="Switch language"><span class="lang-label">EN</span></button>
             <button class="theme-toggle d-none d-lg-flex" id="theme-toggle" aria-label="Alternar tema">
                 <i class="bi bi-moon-fill" id="icon-moon"></i>
                 <i class="bi bi-sun-fill d-none" id="icon-sun"></i>
@@ -54,25 +56,47 @@
 <section id="hero" class="hero-section">
     <div id="particles-js"></div>
     <div class="container hero-container">
-        <div class="hero-content" data-aos="fade-up" data-aos-duration="900">
-            <h1 class="hero-name">Paula <span class="text-gradient">Alessandra</span></h1>
-            <h2 class="hero-typed"><span id="typed"></span></h2>
-            <p class="hero-desc">
-                Desenvolvedora Full-Stack com formação técnica em Eletrotécnica e Telecom.
-                Trabalho com <strong>PHP</strong>, <strong>Java/Spring Boot</strong>,
-                <strong>MySQL</strong> e <strong>JavaScript</strong>, com
-                <strong>35+ projetos entregues</strong> em sistemas de gestão, APIs e integrações.
-            </p>
-            <div class="d-flex gap-3 flex-wrap mb-4">
-                <a href="#portfolio" class="btn-primary-custom">Ver Projetos <i class="bi bi-arrow-right ms-1"></i></a>
-                <a href="#contato"   class="btn-outline-custom">Falar Comigo <i class="bi bi-chat-dots ms-1"></i></a>
+        <div class="hero-grid">
+
+            <!-- Coluna esquerda: texto -->
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="900">
+                <h1 class="hero-name">Paula <span class="text-gradient">Alessandra</span></h1>
+                <h2 class="hero-typed"><span id="typed"></span></h2>
+                <p class="hero-desc" data-i18n-html="hero.desc">
+                    Desenvolvedora Full-Stack com formação técnica em Eletrotécnica e Telecom.
+                    Trabalho com <strong>PHP</strong>, <strong>Java/Spring Boot</strong>,
+                    <strong>MySQL</strong> e <strong>JavaScript</strong>, com
+                    <strong>35+ projetos entregues</strong> em sistemas de gestão, APIs e integrações.
+                </p>
+                <div class="d-flex gap-3 flex-wrap mb-4">
+                    <a href="#portfolio" class="btn-primary-custom"><span data-i18n="hero.btn-projects">Ver Projetos</span> <i class="bi bi-arrow-right ms-1"></i></a>
+                    <a href="#contato"   class="btn-outline-custom"><span data-i18n="hero.btn-contact">Falar Comigo</span> <i class="bi bi-chat-dots ms-1"></i></a>
+                    <a href="assets/docs/Paula.dev.pdf" download class="btn-cv-custom"><i class="bi bi-file-earmark-arrow-down me-1"></i>Download CV</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/paula-alessandra-rodrigues-dos-santos-57586759/" target="_blank" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/paulaalessandrars" target="_blank" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    <a href="mailto:paulaalessandra_rodrigues@outlook.com" class="social-link" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+                    <a href="https://wa.me/+5551981368934" target="_blank" class="social-link" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                </div>
             </div>
-            <div class="hero-socials">
-                <a href="https://www.linkedin.com/in/paula-alessandra-rodrigues-dos-santos-57586759/" target="_blank" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="https://github.com/paulaalessandrars" target="_blank" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
-                <a href="mailto:paulaalessandra_rodrigues@outlook.com" class="social-link" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
-                <a href="https://wa.me/+5551981368934" target="_blank" class="social-link" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+
+            <!-- Coluna direita: terminal de código -->
+            <div class="code-terminal" data-aos="fade-left" data-aos-delay="400" data-aos-duration="900">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <span class="terminal-title" id="terminal-title">PontoService.php</span>
+                    <span class="terminal-lang" id="terminal-lang">PHP</span>
+                </div>
+                <div class="terminal-body">
+                    <pre class="terminal-code"><code id="terminal-code"></code></pre>
+                </div>
             </div>
+
         </div>
     </div>
     <div class="scroll-indicator"><span></span></div>
@@ -86,28 +110,28 @@
                 <div class="stat-card text-center">
                     <div class="stat-icon"><i class="bi bi-code-slash"></i></div>
                     <div class="stat-number"><span class="counter" data-target="35">0</span>+</div>
-                    <div class="stat-label">Projetos Entregues</div>
+                    <div class="stat-label" data-i18n="stat.projects">Projetos Entregues</div>
                 </div>
             </div>
             <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="stat-card text-center">
                     <div class="stat-icon"><i class="bi bi-calendar2-check"></i></div>
                     <div class="stat-number"><span class="counter" data-target="1">0</span>+</div>
-                    <div class="stat-label">Ano como Dev Freelancer</div>
+                    <div class="stat-label" data-i18n="stat.year">Ano como Dev Freelancer</div>
                 </div>
             </div>
             <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
                 <div class="stat-card text-center">
                     <div class="stat-icon"><i class="bi bi-stack"></i></div>
                     <div class="stat-number"><span class="counter" data-target="8">0</span>+</div>
-                    <div class="stat-label">Tecnologias</div>
+                    <div class="stat-label" data-i18n="stat.tech">Tecnologias</div>
                 </div>
             </div>
             <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
                 <div class="stat-card text-center">
                     <div class="stat-icon"><i class="bi bi-trophy"></i></div>
                     <div class="stat-number"><span class="counter" data-target="100">0</span>%</div>
-                    <div class="stat-label">Comprometimento</div>
+                    <div class="stat-label" data-i18n="stat.commitment">Comprometimento</div>
                 </div>
             </div>
         </div>
@@ -123,19 +147,19 @@
                     <img src="assets/img/paula.jpg" alt="Paula Alessandra" class="avatar-img">
                 </div>
                 <div class="mt-4 d-flex flex-column align-items-center gap-2">
-                    <div class="info-pill"><i class="bi bi-geo-alt-fill me-2"></i>Tubarão – SC</div>
-                    <div class="info-pill"><i class="bi bi-mortarboard-fill me-2"></i>ADS · Uninter (2022–2026)</div>
-                    <div class="info-pill"><i class="bi bi-lightning-charge-fill me-2"></i>Técnico em Eletrotécnica</div>
+                    <div class="info-pill"><i class="bi bi-geo-alt-fill me-2"></i><span data-i18n="about.location">Tubarão – SC</span></div>
+                    <div class="info-pill"><i class="bi bi-mortarboard-fill me-2"></i><span data-i18n="about.degree">ADS · Uninter (2022–2026)</span></div>
+                    <div class="info-pill"><i class="bi bi-lightning-charge-fill me-2"></i><span data-i18n="about.tech-course">Técnico em Eletrotécnica</span></div>
                 </div>
             </div>
             <div class="col-lg-8" data-aos="fade-left" data-aos-delay="100">
-                <div class="section-label">Sobre mim</div>
+                <div class="section-label" data-i18n="about.label">Sobre mim</div>
                 <h2 class="section-title">Full-Stack Developer &amp; <span class="text-gradient">Systems Analyst</span></h2>
-                <p class="text-muted-custom mb-3">
+                <p class="text-muted-custom mb-3" data-i18n="about.p1">
                     Desenvolvedora Full-Stack com base técnica em Eletrotécnica e formação em Análise e Desenvolvimento de Sistemas.
                     Atuo no desenvolvimento de sistemas web completos com foco em performance, arquitetura limpa e entrega de valor real.
                 </p>
-                <p class="text-muted-custom mb-4">
+                <p class="text-muted-custom mb-4" data-i18n-html="about.p2">
                     Com <strong class="text-highlight">35+ projetos em produção</strong>, tenho experiência em gamificação,
                     dashboards financeiros, integrações de API, sistemas de pagamento,
                     arquiteturas multi-tenant e migração de sistemas legados Java 8 → 21.
@@ -147,8 +171,8 @@
                     <div class="col-sm-6"><div class="about-feature"><i class="bi bi-check2-circle me-2"></i>REST APIs · MVC · Clean Code</div></div>
                 </div>
                 <div class="d-flex gap-3 flex-wrap">
-                    <a href="#portfolio" class="btn-primary-custom">Ver Portfólio</a>
-                    <a href="#contato"   class="btn-outline-custom">Entre em Contato</a>
+                    <a href="#portfolio" class="btn-primary-custom" data-i18n="about.btn-portfolio">Ver Portfólio</a>
+                    <a href="#contato"   class="btn-outline-custom" data-i18n="about.btn-contact">Entre em Contato</a>
                 </div>
             </div>
         </div>
@@ -159,9 +183,9 @@
 <section id="stack" class="section-pad bg-alt">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
-            <div class="section-label">Tecnologias</div>
-            <h2 class="section-title">Minha <span class="text-gradient">Stack</span></h2>
-            <p class="text-muted-custom">Ferramentas e tecnologias que uso no dia a dia</p>
+            <div class="section-label" data-i18n="stack.label">Tecnologias</div>
+            <h2 class="section-title"><span data-i18n="stack.title-prefix">Minha</span> <span class="text-gradient">Stack</span></h2>
+            <p class="text-muted-custom" data-i18n="stack.subtitle">Ferramentas e tecnologias que uso no dia a dia</p>
         </div>
         <div class="stack-group mb-5" data-aos="fade-up">
             <h6 class="stack-group-label"><i class="bi bi-server me-2"></i>Backend</h6>
@@ -183,14 +207,14 @@
             </div>
         </div>
         <div class="stack-group mb-5" data-aos="fade-up">
-            <h6 class="stack-group-label"><i class="bi bi-database me-2"></i>Banco de Dados</h6>
+            <h6 class="stack-group-label"><i class="bi bi-database me-2"></i><span data-i18n="stack.database">Banco de Dados</span></h6>
             <div class="row g-3">
                 <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div></div>
                 <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg" alt="MariaDB"><span>MariaDB</span></div></div>
             </div>
         </div>
         <div class="stack-group" data-aos="fade-up">
-            <h6 class="stack-group-label"><i class="bi bi-tools me-2"></i>Ferramentas</h6>
+            <h6 class="stack-group-label"><i class="bi bi-tools me-2"></i><span data-i18n="stack.tools">Ferramentas</span></h6>
             <div class="row g-3">
                 <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"><span>Git</span></div></div>
                 <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" class="icon-invert"><span>GitHub</span></div></div>
@@ -208,18 +232,18 @@
 <section id="experiencia" class="section-pad">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
-            <div class="section-label">Trajetória</div>
-            <h2 class="section-title">Formação &amp; <span class="text-gradient">Experiência</span></h2>
+            <div class="section-label" data-i18n="exp.label">Trajetória</div>
+            <h2 class="section-title"><span data-i18n="exp.title-prefix">Formação</span> &amp; <span class="text-gradient" data-i18n="exp.title-suffix">Experiência</span></h2>
         </div>
         <div class="row g-5">
             <div class="col-lg-5" data-aos="fade-right">
-                <h5 class="exp-col-title"><i class="bi bi-mortarboard-fill me-2"></i>Formação Acadêmica</h5>
+                <h5 class="exp-col-title"><i class="bi bi-mortarboard-fill me-2"></i><span data-i18n="exp.col-edu">Formação Acadêmica</span></h5>
                 <div class="timeline">
                     <div class="tl-item">
                         <div class="tl-dot tl-dot-primary"></div>
                         <div class="tl-content">
                             <span class="tl-period">2022 – 2026</span>
-                            <h6>Análise e Desenvolvimento de Sistemas</h6>
+                            <h6 data-i18n="exp.ads-title">Análise e Desenvolvimento de Sistemas</h6>
                             <p class="text-muted-custom small mb-0">Uninter</p>
                         </div>
                     </div>
@@ -227,33 +251,33 @@
                         <div class="tl-dot"></div>
                         <div class="tl-content">
                             <span class="tl-period">2008 – 2015</span>
-                            <h6>Técnico em Eletrotécnica</h6>
+                            <h6 data-i18n="exp.eletro-title">Técnico em Eletrotécnica</h6>
                             <p class="text-muted-custom small mb-0">Fundação Liberato</p>
                         </div>
                     </div>
                 </div>
-                <h5 class="exp-col-title mt-5"><i class="bi bi-award-fill me-2"></i>Certificações</h5>
+                <h5 class="exp-col-title mt-5"><i class="bi bi-award-fill me-2"></i><span data-i18n="exp.certs-title">Certificações</span></h5>
                 <div class="d-flex flex-wrap gap-2">
-                    <span class="cert-badge">Lógica de Programação</span>
-                    <span class="cert-badge">Pensamento Computacional</span>
+                    <span class="cert-badge" data-i18n="cert.logica">Lógica de Programação</span>
+                    <span class="cert-badge" data-i18n="cert.pensamento">Pensamento Computacional</span>
                     <span class="cert-badge">HTML &amp; CSS</span>
                     <span class="cert-badge">JavaScript</span>
-                    <span class="cert-badge">Inteligência Artificial</span>
-                    <span class="cert-badge">Redes de Computadores</span>
-                    <span class="cert-badge">Sucesso do Cliente</span>
-                    <span class="cert-badge">Atendimento ao Cliente</span>
+                    <span class="cert-badge" data-i18n="cert.ia">Inteligência Artificial</span>
+                    <span class="cert-badge" data-i18n="cert.redes">Redes de Computadores</span>
+                    <span class="cert-badge" data-i18n="cert.sucesso">Sucesso do Cliente</span>
+                    <span class="cert-badge" data-i18n="cert.atendimento">Atendimento ao Cliente</span>
                 </div>
             </div>
             <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
-                <h5 class="exp-col-title"><i class="bi bi-briefcase-fill me-2"></i>Experiência Profissional</h5>
+                <h5 class="exp-col-title"><i class="bi bi-briefcase-fill me-2"></i><span data-i18n="exp.col-prof">Experiência Profissional</span></h5>
                 <div class="timeline">
                     <div class="tl-item">
                         <div class="tl-dot tl-dot-accent"></div>
                         <div class="tl-content tl-featured">
-                            <span class="tl-period">2025 – Atualmente</span>
-                            <h6>Desenvolvedora Full-Stack Freelancer</h6>
-                            <p class="text-muted-custom small">Projetos Independentes</p>
-                            <p class="text-muted-custom small">PHP, Java/Spring Boot, MySQL e JavaScript. 35+ projetos: gamificação, dashboards, APIs, pagamentos, UX/UI.</p>
+                            <span class="tl-period" data-i18n="exp.job1-period">2025 – Atualmente</span>
+                            <h6 data-i18n="exp.job1-title">Desenvolvedora Full-Stack Freelancer</h6>
+                            <p class="text-muted-custom small" data-i18n="exp.job1-company">Projetos Independentes</p>
+                            <p class="text-muted-custom small" data-i18n="exp.job1-desc">PHP, Java/Spring Boot, MySQL e JavaScript. 35+ projetos: gamificação, dashboards, APIs, pagamentos, UX/UI.</p>
                             <div class="d-flex flex-wrap gap-1 mt-2">
                                 <span class="tl-tag">PHP</span><span class="tl-tag">Java</span>
                                 <span class="tl-tag">Spring Boot</span><span class="tl-tag">MySQL</span>
@@ -263,16 +287,16 @@
                     <div class="tl-item">
                         <div class="tl-dot tl-dot-primary"></div>
                         <div class="tl-content">
-                            <span class="tl-period">2025 – Atualmente</span>
-                            <h6>Suporte Técnico N1 – Service Desk</h6>
-                            <p class="text-muted-custom small mb-0">Triagem de chamados e apoio em diagnósticos.</p>
+                            <span class="tl-period" data-i18n="exp.job2-period">2025 – Atualmente</span>
+                            <h6 data-i18n="exp.job2-title">Suporte Técnico N1 – Service Desk</h6>
+                            <p class="text-muted-custom small mb-0" data-i18n="exp.job2-desc">Triagem de chamados e apoio em diagnósticos.</p>
                         </div>
                     </div>
                     <div class="tl-item">
                         <div class="tl-dot"></div>
                         <div class="tl-content">
                             <span class="tl-period">2024 – 2025</span>
-                            <h6>Suporte Técnico N1 – Helpdesk</h6>
+                            <h6 data-i18n="exp.job3-title">Suporte Técnico N1 – Helpdesk</h6>
                             <p class="text-muted-custom small mb-0">UPVision</p>
                         </div>
                     </div>
@@ -280,7 +304,7 @@
                         <div class="tl-dot"></div>
                         <div class="tl-content">
                             <span class="tl-period">2023 – 2024</span>
-                            <h6>Analista de Atendimento</h6>
+                            <h6 data-i18n="exp.job4-title">Analista de Atendimento</h6>
                             <p class="text-muted-custom small mb-0">Tmw Telecom</p>
                         </div>
                     </div>
@@ -288,9 +312,67 @@
                         <div class="tl-dot"></div>
                         <div class="tl-content">
                             <span class="tl-period">2015 – 2023</span>
-                            <h6>Desenhista Projetista / Técnico de Telecom</h6>
+                            <h6 data-i18n="exp.job5-title">Desenhista Projetista / Técnico de Telecom</h6>
                             <p class="text-muted-custom small mb-0">Sinos Telecomunicações Ltda</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DESTAQUES -->
+<section id="destaques" class="section-pad">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label" data-i18n="feat.label">Em destaque</div>
+            <h2 class="section-title"><span data-i18n="feat.title-prefix">Projetos</span> <span class="text-gradient" data-i18n="feat.title-suffix">Principais</span></h2>
+            <p class="text-muted-custom" data-i18n="feat.subtitle">Trabalhos que melhor representam minha stack e profundidade técnica</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="featured-card h-100">
+                    <div class="featured-card-header">
+                        <div class="featured-icon-wrap"><span class="featured-icon">🎯</span></div>
+                        <div class="d-flex flex-wrap gap-1 mt-3">
+                            <span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">FIFO</span>
+                        </div>
+                    </div>
+                    <div class="featured-card-body">
+                        <span class="featured-category" data-i18n="feat.c1-cat">Gamificação</span>
+                        <h5 data-i18n="feat.c1-title">Motor de Saldo Dinâmico e Inventário FIFO</h5>
+                        <p class="text-muted-custom small" data-i18n="feat.c1-desc">Motor de cálculo de saldo com consumo FIFO, abatendo pontos dos registros mais antigos com histórico de auditoria completo. Solução para consistência transacional em sistemas de fidelidade.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="featured-card h-100">
+                    <div class="featured-card-header featured-card-header--java">
+                        <div class="featured-icon-wrap"><span class="featured-icon">☕</span></div>
+                        <div class="d-flex flex-wrap gap-1 mt-3">
+                            <span class="ptag">Java 21</span><span class="ptag">Spring Boot</span><span class="ptag">ERP</span>
+                        </div>
+                    </div>
+                    <div class="featured-card-body">
+                        <span class="featured-category" data-i18n="feat.c2-cat">Backend / Migração</span>
+                        <h5 data-i18n="feat.c2-title">Migração Java 8 → 21: Integração ERP</h5>
+                        <p class="text-muted-custom small" data-i18n="feat.c2-desc">Migração completa de microsserviço legado para Java 21 LTS com isolamento de ambientes de teste, garantindo zero impacto em produção durante a transição.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="featured-card h-100">
+                    <div class="featured-card-header featured-card-header--pay">
+                        <div class="featured-icon-wrap"><span class="featured-icon">📅</span></div>
+                        <div class="d-flex flex-wrap gap-1 mt-3">
+                            <span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">Multi-tenant</span>
+                        </div>
+                    </div>
+                    <div class="featured-card-body">
+                        <span class="featured-category" data-i18n="feat.c3-cat">Pagamentos</span>
+                        <h5 data-i18n="feat.c3-title">Sistema de Reservas com Pagamento Antecipado</h5>
+                        <p class="text-muted-custom small" data-i18n="feat.c3-desc">Regras de pagamento antecipado configuráveis por datas específicas com controle de capacidade por período e isolamento de dados por tenant.</p>
                     </div>
                 </div>
             </div>
@@ -302,65 +384,65 @@
 <section id="portfolio" class="section-pad bg-alt">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
-            <div class="section-label">Trabalhos</div>
-            <h2 class="section-title">Meu <span class="text-gradient">Portfólio</span></h2>
-            <p class="text-muted-custom">35+ projetos entregues em produção</p>
+            <div class="section-label" data-i18n="port.label">Trabalhos</div>
+            <h2 class="section-title"><span data-i18n="port.title-prefix">Meu</span> <span class="text-gradient" data-i18n="port.title-suffix">Portfólio</span></h2>
+            <p class="text-muted-custom" data-i18n="port.subtitle">35+ projetos entregues em produção</p>
         </div>
         <div class="filtros-wrapper d-flex flex-wrap gap-2 justify-content-center mb-3" data-aos="fade-up">
-            <button class="filtro-btn active" data-filter="all">Todos</button>
-            <button class="filtro-btn" data-filter="gamificacao">🎮 Gamificação</button>
-            <button class="filtro-btn" data-filter="obras">🏗️ Obras</button>
-            <button class="filtro-btn" data-filter="relatorios">📊 Relatórios</button>
-            <button class="filtro-btn" data-filter="frontend">🎨 Frontend/UX</button>
-            <button class="filtro-btn" data-filter="backend">⚙️ Backend/API</button>
-            <button class="filtro-btn" data-filter="pagamentos">💳 Pagamentos</button>
-            <button class="filtro-btn" data-filter="arquitetura">🔐 Arquitetura</button>
+            <button class="filtro-btn active" data-filter="all"          data-i18n="filter.all">Todos</button>
+            <button class="filtro-btn" data-filter="gamificacao"         data-i18n="filter.gamificacao">🎮 Gamificação</button>
+            <button class="filtro-btn" data-filter="obras"               data-i18n="filter.obras">🏗️ Obras</button>
+            <button class="filtro-btn" data-filter="relatorios"          data-i18n="filter.relatorios">📊 Relatórios</button>
+            <button class="filtro-btn" data-filter="frontend"            data-i18n="filter.frontend">🎨 Frontend/UX</button>
+            <button class="filtro-btn" data-filter="backend"             data-i18n="filter.backend">⚙️ Backend/API</button>
+            <button class="filtro-btn" data-filter="pagamentos"          data-i18n="filter.pagamentos">💳 Pagamentos</button>
+            <button class="filtro-btn" data-filter="arquitetura"         data-i18n="filter.arquitetura">🔐 Arquitetura</button>
         </div>
         <p class="text-center text-muted-custom small mb-4" id="portfolio-counter"></p>
         <div class="row g-4" id="portfolio-grid">
             <!-- GAMIFICAÇÃO -->
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🎯</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span></div></div><h6>Motor de Saldo Dinâmico e Inventário FIFO</h6><p class="text-muted-custom small">Motor de cálculo de saldo com consumo FIFO, abatendo pontos dos registros mais antigos com histórico de auditoria completo.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🛒</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span><span class="ptag">E-commerce</span></div></div><h6>Integração de E-commerce ao Ledger de Pontos</h6><p class="text-muted-custom small">Migração do resgate de pontos para arquitetura centralizada de ledger com débito transacional automático.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📦</span><div class="project-tags"><span class="ptag">SQL</span><span class="ptag">PHP</span></div></div><h6>Migração de Dados para Sistema de Pontuação</h6><p class="text-muted-custom small">Migração da lógica de pontuação para arquitetura centralizada com refatoração do modelo de dados legado.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🏗️</span><div class="project-tags"><span class="ptag">SQL</span><span class="ptag">PHP</span><span class="ptag">Full-stack</span></div></div><h6>Arquitetura do Sistema Centralizado de Pontuação</h6><p class="text-muted-custom small">Ledger central consolidando registros de pontos de diferentes origens com restrições de integridade.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">⚙️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span></div></div><h6>Expansão do Módulo de Configurações de Gamificação</h6><p class="text-muted-custom small">Parâmetros de pontuação dinâmica por tipo de cadastro sem re-deploy.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💡</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">JavaScript</span></div></div><h6>Sistema Dinâmico de Pontuação para Profissionais</h6><p class="text-muted-custom small">Full-stack para atribuição flexível e personalizável de pontos com interface de gerenciamento otimizada.</p></div></div>
+            <div class="portfolio-item bento-wide" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🎯</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span></div></div><h6 data-i18n="p-g1.t">Motor de Saldo Dinâmico e Inventário FIFO</h6><p class="text-muted-custom small" data-i18n="p-g1.d">Motor de cálculo de saldo com consumo FIFO, abatendo pontos dos registros mais antigos com histórico de auditoria completo.</p></div></div>
+            <div class="portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🛒</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span><span class="ptag">E-commerce</span></div></div><h6 data-i18n="p-g2.t">Integração de E-commerce ao Ledger de Pontos</h6><p class="text-muted-custom small" data-i18n="p-g2.d">Migração do resgate de pontos para arquitetura centralizada de ledger com débito transacional automático.</p></div></div>
+            <div class="portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📦</span><div class="project-tags"><span class="ptag">SQL</span><span class="ptag">PHP</span></div></div><h6 data-i18n="p-g3.t">Migração de Dados para Sistema de Pontuação</h6><p class="text-muted-custom small" data-i18n="p-g3.d">Migração da lógica de pontuação para arquitetura centralizada com refatoração do modelo de dados legado.</p></div></div>
+            <div class="portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🏗️</span><div class="project-tags"><span class="ptag">SQL</span><span class="ptag">PHP</span><span class="ptag">Full-stack</span></div></div><h6 data-i18n="p-g4.t">Arquitetura do Sistema Centralizado de Pontuação</h6><p class="text-muted-custom small" data-i18n="p-g4.d">Ledger central consolidando registros de pontos de diferentes origens com restrições de integridade.</p></div></div>
+            <div class="portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">⚙️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span></div></div><h6 data-i18n="p-g5.t">Expansão do Módulo de Configurações de Gamificação</h6><p class="text-muted-custom small" data-i18n="p-g5.d">Parâmetros de pontuação dinâmica por tipo de cadastro sem re-deploy.</p></div></div>
+            <div class="portfolio-item bento-wide" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💡</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">JavaScript</span></div></div><h6 data-i18n="p-g6.t">Sistema Dinâmico de Pontuação para Profissionais</h6><p class="text-muted-custom small" data-i18n="p-g6.d">Full-stack para atribuição flexível e personalizável de pontos com interface de gerenciamento otimizada.</p></div></div>
             <!-- OBRAS -->
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="obras"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📊</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">JavaScript</span><span class="ptag">SQL</span></div></div><h6>Dashboard de KPIs em Obras</h6><p class="text-muted-custom small">Indicadores de engajamento com edição inline de status e prazos sem recarregar a página.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="obras"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔍</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span><span class="ptag">Lightbox</span></div></div><h6>Filtros Avançados e UX no Módulo de Obras</h6><p class="text-muted-custom small">Filtros de escopo, preenchimento automático e visualizador de imagens integrado.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="obras"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🏷️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL N:N</span></div></div><h6>Categorização Multi-Segmento para Parceiros</h6><p class="text-muted-custom small">Múltiplos segmentos por perfil via N:N com gestão completa e integridade referencial.</p></div></div>
+            <div class="portfolio-item bento-wide" data-category="obras"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📊</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">JavaScript</span><span class="ptag">SQL</span></div></div><h6 data-i18n="p-o1.t">Dashboard de KPIs em Obras</h6><p class="text-muted-custom small" data-i18n="p-o1.d">Indicadores de engajamento com edição inline de status e prazos sem recarregar a página.</p></div></div>
+            <div class="portfolio-item" data-category="obras"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔍</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span><span class="ptag">Lightbox</span></div></div><h6 data-i18n="p-o2.t">Filtros Avançados e UX no Módulo de Obras</h6><p class="text-muted-custom small" data-i18n="p-o2.d">Filtros de escopo, preenchimento automático e visualizador de imagens integrado.</p></div></div>
+            <div class="portfolio-item" data-category="obras"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🏷️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL N:N</span></div></div><h6 data-i18n="p-o3.t">Categorização Multi-Segmento para Parceiros</h6><p class="text-muted-custom small" data-i18n="p-o3.d">Múltiplos segmentos por perfil via N:N com gestão completa e integridade referencial.</p></div></div>
             <!-- RELATÓRIOS -->
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="relatorios"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📋</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span></div></div><h6>Rastreabilidade de Atendimento em Relatórios Financeiros</h6><p class="text-muted-custom small">Identificação de vendas assistidas por atendente com coluna hierárquica para comissões.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="relatorios"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📈</span><div class="project-tags"><span class="ptag">SQL Avançado</span><span class="ptag">PHP</span></div></div><h6>Painel Analítico de Monitoramento</h6><p class="text-muted-custom small">Consulta com múltiplos JOINs e agregações para dados de reservas em tempo real.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="relatorios"><div class="project-card h-100"><div class="project-header"><span class="project-icon">⚡</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span><span class="ptag">Otimização</span></div></div><h6>Otimização de Performance em Filtros</h6><p class="text-muted-custom small">Refatoração sem funções de alto custo no banco, mantendo performance estável em produção.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="relatorios"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🗂️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MVC</span></div></div><h6>Desenvolvimento Modular de Relatório Financeiro</h6><p class="text-muted-custom small">Novo módulo com camadas Controller e Repository isoladas por adaptação de módulo existente.</p></div></div>
+            <div class="portfolio-item" data-category="relatorios"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📋</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span></div></div><h6 data-i18n="p-r1.t">Rastreabilidade de Atendimento em Relatórios Financeiros</h6><p class="text-muted-custom small" data-i18n="p-r1.d">Identificação de vendas assistidas por atendente com coluna hierárquica para comissões.</p></div></div>
+            <div class="portfolio-item bento-wide" data-category="relatorios"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📈</span><div class="project-tags"><span class="ptag">SQL Avançado</span><span class="ptag">PHP</span></div></div><h6 data-i18n="p-r2.t">Painel Analítico de Monitoramento</h6><p class="text-muted-custom small" data-i18n="p-r2.d">Consulta com múltiplos JOINs e agregações para dados de reservas em tempo real.</p></div></div>
+            <div class="portfolio-item" data-category="relatorios"><div class="project-card h-100"><div class="project-header"><span class="project-icon">⚡</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span><span class="ptag">Otimização</span></div></div><h6 data-i18n="p-r3.t">Otimização de Performance em Filtros</h6><p class="text-muted-custom small" data-i18n="p-r3.d">Refatoração sem funções de alto custo no banco, mantendo performance estável em produção.</p></div></div>
+            <div class="portfolio-item" data-category="relatorios"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🗂️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MVC</span></div></div><h6 data-i18n="p-r4.t">Desenvolvimento Modular de Relatório Financeiro</h6><p class="text-muted-custom small" data-i18n="p-r4.d">Novo módulo com camadas Controller e Repository isoladas por adaptação de módulo existente.</p></div></div>
             <!-- FRONTEND/UX -->
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔍</span><div class="project-tags"><span class="ptag">JavaScript</span><span class="ptag">Ajax</span><span class="ptag">PHP</span></div></div><h6>Busca Dinâmica com Autocomplete</h6><p class="text-muted-custom small">Autocomplete via Ajax com redirecionamento automático pós-cadastro e correções de responsividade.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📱</span><div class="project-tags"><span class="ptag">JavaScript</span><span class="ptag">CSS</span><span class="ptag">UX/UI</span></div></div><h6>Refatoração de Interface para Mobile</h6><p class="text-muted-custom small">Layout Mobile-First em duas colunas eliminando rolagem horizontal em tela operacional crítica.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💬</span><div class="project-tags"><span class="ptag">JavaScript</span><span class="ptag">UX</span></div></div><h6>Geração Dinâmica de Mensagens de Confirmação</h6><p class="text-muted-custom small">Algoritmo que gera mensagens formatadas para WhatsApp eliminando preenchimento manual.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🗺️</span><div class="project-tags"><span class="ptag">JavaScript</span><span class="ptag">Google Maps</span></div></div><h6>Integração com Google Maps</h6><p class="text-muted-custom small">Conversão automática de endereços em links Google Maps com correções de responsividade.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🛒</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">JavaScript</span></div></div><h6>CRM para Recuperação de Vendas</h6><p class="text-muted-custom small">Reengajamento de clientes com pedidos abandonados via e-mails personalizados direto do relatório.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💰</span><div class="project-tags"><span class="ptag">Electron</span><span class="ptag">JavaScript</span></div></div><h6>Finance Controller</h6><p class="text-muted-custom small">App desktop de controle financeiro com gráficos, importação de planilhas Excel e notificações toast.</p></div></div>
+            <div class="portfolio-item bento-wide" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔍</span><div class="project-tags"><span class="ptag">JavaScript</span><span class="ptag">Ajax</span><span class="ptag">PHP</span></div></div><h6 data-i18n="p-f1.t">Busca Dinâmica com Autocomplete</h6><p class="text-muted-custom small" data-i18n="p-f1.d">Autocomplete via Ajax com redirecionamento automático pós-cadastro e correções de responsividade.</p></div></div>
+            <div class="portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📱</span><div class="project-tags"><span class="ptag">JavaScript</span><span class="ptag">CSS</span><span class="ptag">UX/UI</span></div></div><h6 data-i18n="p-f2.t">Refatoração de Interface para Mobile</h6><p class="text-muted-custom small" data-i18n="p-f2.d">Layout Mobile-First em duas colunas eliminando rolagem horizontal em tela operacional crítica.</p></div></div>
+            <div class="portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💬</span><div class="project-tags"><span class="ptag">JavaScript</span><span class="ptag">UX</span></div></div><h6 data-i18n="p-f3.t">Geração Dinâmica de Mensagens de Confirmação</h6><p class="text-muted-custom small" data-i18n="p-f3.d">Algoritmo que gera mensagens formatadas para WhatsApp eliminando preenchimento manual.</p></div></div>
+            <div class="portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🗺️</span><div class="project-tags"><span class="ptag">JavaScript</span><span class="ptag">Google Maps</span></div></div><h6 data-i18n="p-f4.t">Integração com Google Maps</h6><p class="text-muted-custom small" data-i18n="p-f4.d">Conversão automática de endereços em links Google Maps com correções de responsividade.</p></div></div>
+            <div class="portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🛒</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">JavaScript</span></div></div><h6 data-i18n="p-f5.t">CRM para Recuperação de Vendas</h6><p class="text-muted-custom small" data-i18n="p-f5.d">Reengajamento de clientes com pedidos abandonados via e-mails personalizados direto do relatório.</p></div></div>
+            <div class="portfolio-item bento-wide" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💰</span><div class="project-tags"><span class="ptag">Electron</span><span class="ptag">JavaScript</span></div></div><h6 data-i18n="p-f6.t">Finance Controller</h6><p class="text-muted-custom small" data-i18n="p-f6.d">App desktop de controle financeiro com gráficos, importação de planilhas Excel e notificações toast.</p></div></div>
             <!-- BACKEND/API -->
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔒</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">Null Safety</span></div></div><h6>Depuração em Módulo de Autenticação</h6><p class="text-muted-custom small">Análise de logs críticos com tratamento defensivo e fallbacks que garantem estabilidade.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">☕</span><div class="project-tags"><span class="ptag">Java 21</span><span class="ptag">ERP</span></div></div><h6>Migração Java 8 → 21: Integração ERP</h6><p class="text-muted-custom small">Migração completa para Java 21 LTS com isolamento de ambientes de teste.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📧</span><div class="project-tags"><span class="ptag">Java 21</span><span class="ptag">Maven</span></div></div><h6>Migração Java 8 → 21: E-mails Transacionais</h6><p class="text-muted-custom small">Modernização de microsserviço com estratégia eliminando disparo acidental em produção.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📬</span><div class="project-tags"><span class="ptag">Java</span><span class="ptag">AWS SES</span></div></div><h6>Integração de E-mail com AWS SES</h6><p class="text-muted-custom small">Arquitetura de notificações com Amazon SES segregando métricas por aplicação. POC validada.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💲</span><div class="project-tags"><span class="ptag">Java</span><span class="ptag">Spring Boot</span><span class="ptag">REST</span></div></div><h6>Precificação Dinâmica Temporal em API REST</h6><p class="text-muted-custom small">API que calcula preço vigente ou futuro por data, com regra encapsulada no domínio.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">⏰</span><div class="project-tags"><span class="ptag">Java</span><span class="ptag">@Scheduled</span></div></div><h6>Automação de Expiração de Vendas</h6><p class="text-muted-custom small">Rotina com lógica condicional de expiração por período e consultas otimizadas por criticidade.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🐛</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MariaDB</span></div></div><h6>Correção de Bugs Críticos em Filtro de Vendas</h6><p class="text-muted-custom small">Correção de conflito de collation e vulnerabilidade SQL com migração para prepared statements.</p></div></div>
+            <div class="portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔒</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">Null Safety</span></div></div><h6 data-i18n="p-b1.t">Depuração em Módulo de Autenticação</h6><p class="text-muted-custom small" data-i18n="p-b1.d">Análise de logs críticos com tratamento defensivo e fallbacks que garantem estabilidade.</p></div></div>
+            <div class="portfolio-item bento-wide" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">☕</span><div class="project-tags"><span class="ptag">Java 21</span><span class="ptag">ERP</span></div></div><h6 data-i18n="p-b2.t">Migração Java 8 → 21: Integração ERP</h6><p class="text-muted-custom small" data-i18n="p-b2.d">Migração completa para Java 21 LTS com isolamento de ambientes de teste.</p></div></div>
+            <div class="portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📧</span><div class="project-tags"><span class="ptag">Java 21</span><span class="ptag">Maven</span></div></div><h6 data-i18n="p-b3.t">Migração Java 8 → 21: E-mails Transacionais</h6><p class="text-muted-custom small" data-i18n="p-b3.d">Modernização de microsserviço com estratégia eliminando disparo acidental em produção.</p></div></div>
+            <div class="portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📬</span><div class="project-tags"><span class="ptag">Java</span><span class="ptag">AWS SES</span></div></div><h6 data-i18n="p-b4.t">Integração de E-mail com AWS SES</h6><p class="text-muted-custom small" data-i18n="p-b4.d">Arquitetura de notificações com Amazon SES segregando métricas por aplicação. POC validada.</p></div></div>
+            <div class="portfolio-item bento-wide" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💲</span><div class="project-tags"><span class="ptag">Java</span><span class="ptag">Spring Boot</span><span class="ptag">REST</span></div></div><h6 data-i18n="p-b5.t">Precificação Dinâmica Temporal em API REST</h6><p class="text-muted-custom small" data-i18n="p-b5.d">API que calcula preço vigente ou futuro por data, com regra encapsulada no domínio.</p></div></div>
+            <div class="portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">⏰</span><div class="project-tags"><span class="ptag">Java</span><span class="ptag">@Scheduled</span></div></div><h6 data-i18n="p-b6.t">Automação de Expiração de Vendas</h6><p class="text-muted-custom small" data-i18n="p-b6.d">Rotina com lógica condicional de expiração por período e consultas otimizadas por criticidade.</p></div></div>
+            <div class="portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🐛</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MariaDB</span></div></div><h6 data-i18n="p-b7.t">Correção de Bugs Críticos em Filtro de Vendas</h6><p class="text-muted-custom small" data-i18n="p-b7.d">Correção de conflito de collation e vulnerabilidade SQL com migração para prepared statements.</p></div></div>
             <!-- PAGAMENTOS -->
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💰</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">JavaScript</span></div></div><h6>Gerenciamento de Meios de Pagamento</h6><p class="text-muted-custom small">Vínculo relacional entre métodos e formas de pagamento com lógica condicional de interface.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🖥️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">CRUD</span></div></div><h6>Módulo de Terminais de Pagamento (TEF)</h6><p class="text-muted-custom small">CRUD completo para terminais físicos com inativação lógica preservando histórico.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">✏️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">JavaScript</span></div></div><h6>Edição de Itens com Controle de Desconto</h6><p class="text-muted-custom small">Recálculo em tempo real com persistência em múltiplas tabelas e auditoria completa.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📅</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span></div></div><h6>Sistema de Reservas com Pagamento Antecipado</h6><p class="text-muted-custom small">Regras de pagamento antecipado em datas específicas com controle de capacidade por período.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🏦</span><div class="project-tags"><span class="ptag">PHP MVC</span><span class="ptag">Multi-tenant</span></div></div><h6>Refatoração do Módulo de Caixas</h6><p class="text-muted-custom small">Desacoplamento de provedor com isolamento de dados por tenant em todas as operações.</p></div></div>
+            <div class="portfolio-item bento-wide" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💰</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">JavaScript</span></div></div><h6 data-i18n="p-p1.t">Gerenciamento de Meios de Pagamento</h6><p class="text-muted-custom small" data-i18n="p-p1.d">Vínculo relacional entre métodos e formas de pagamento com lógica condicional de interface.</p></div></div>
+            <div class="portfolio-item" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🖥️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">CRUD</span></div></div><h6 data-i18n="p-p2.t">Módulo de Terminais de Pagamento (TEF)</h6><p class="text-muted-custom small" data-i18n="p-p2.d">CRUD completo para terminais físicos com inativação lógica preservando histórico.</p></div></div>
+            <div class="portfolio-item" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">✏️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">JavaScript</span></div></div><h6 data-i18n="p-p3.t">Edição de Itens com Controle de Desconto</h6><p class="text-muted-custom small" data-i18n="p-p3.d">Recálculo em tempo real com persistência em múltiplas tabelas e auditoria completa.</p></div></div>
+            <div class="portfolio-item" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📅</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span></div></div><h6 data-i18n="p-p4.t">Sistema de Reservas com Pagamento Antecipado</h6><p class="text-muted-custom small" data-i18n="p-p4.d">Regras de pagamento antecipado em datas específicas com controle de capacidade por período.</p></div></div>
+            <div class="portfolio-item bento-wide" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🏦</span><div class="project-tags"><span class="ptag">PHP MVC</span><span class="ptag">Multi-tenant</span></div></div><h6 data-i18n="p-p5.t">Refatoração do Módulo de Caixas</h6><p class="text-muted-custom small" data-i18n="p-p5.d">Desacoplamento de provedor com isolamento de dados por tenant em todas as operações.</p></div></div>
             <!-- ARQUITETURA -->
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔑</span><div class="project-tags"><span class="ptag">Java/PHP</span><span class="ptag">Auth</span></div></div><h6>Fluxo Dinâmico de Recuperação de Acesso</h6><p class="text-muted-custom small">Módulo de recuperação de senhas para múltiplos identificadores por configuração de cliente.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔐</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">Multi-tenant</span></div></div><h6>Escopo de Acesso por Tenant</h6><p class="text-muted-custom small">Filtros garantindo que cada cliente acesse apenas seus próprios dados em todas as camadas.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📡</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span></div></div><h6>Módulo de Canais de Venda com Unicidade Condicional</h6><p class="text-muted-custom small">Validação de unicidade condicional bloqueando duplicatas para tipos operacionais específicos.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🌍</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">JavaScript</span></div></div><h6>Cadastro Internacional no PDV</h6><p class="text-muted-custom small">Campos dinâmicos para clientes nacionais e estrangeiros com alternância automática de validações.</p></div></div>
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🖥️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">CRUD</span></div></div><h6>Módulo de Gerenciamento de Recursos Físicos</h6><p class="text-muted-custom small">Gestão de ativos físicos com controle de status e integração via chave estrangeira.</p></div></div>
+            <div class="portfolio-item bento-wide" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔑</span><div class="project-tags"><span class="ptag">Java/PHP</span><span class="ptag">Auth</span></div></div><h6 data-i18n="p-a1.t">Fluxo Dinâmico de Recuperação de Acesso</h6><p class="text-muted-custom small" data-i18n="p-a1.d">Módulo de recuperação de senhas para múltiplos identificadores por configuração de cliente.</p></div></div>
+            <div class="portfolio-item" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔐</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">Multi-tenant</span></div></div><h6 data-i18n="p-a2.t">Escopo de Acesso por Tenant</h6><p class="text-muted-custom small" data-i18n="p-a2.d">Filtros garantindo que cada cliente acesse apenas seus próprios dados em todas as camadas.</p></div></div>
+            <div class="portfolio-item" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📡</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span></div></div><h6 data-i18n="p-a3.t">Módulo de Canais de Venda com Unicidade Condicional</h6><p class="text-muted-custom small" data-i18n="p-a3.d">Validação de unicidade condicional bloqueando duplicatas para tipos operacionais específicos.</p></div></div>
+            <div class="portfolio-item" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🌍</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">JavaScript</span></div></div><h6 data-i18n="p-a4.t">Cadastro Internacional no PDV</h6><p class="text-muted-custom small" data-i18n="p-a4.d">Campos dinâmicos para clientes nacionais e estrangeiros com alternância automática de validações.</p></div></div>
+            <div class="portfolio-item bento-wide" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🖥️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">CRUD</span></div></div><h6 data-i18n="p-a5.t">Módulo de Gerenciamento de Recursos Físicos</h6><p class="text-muted-custom small" data-i18n="p-a5.d">Gestão de ativos físicos com controle de status e integração via chave estrangeira.</p></div></div>
         </div>
     </div>
 </section>
@@ -369,14 +451,14 @@
 <section id="contato" class="section-pad">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
-            <div class="section-label">Vamos conversar</div>
-            <h2 class="section-title">Entre em <span class="text-gradient">Contato</span></h2>
-            <p class="text-muted-custom">Aberta a oportunidades, freelas e parcerias</p>
+            <div class="section-label" data-i18n="contact.label">Vamos conversar</div>
+            <h2 class="section-title"><span data-i18n="contact.title-prefix">Entre em</span> <span class="text-gradient" data-i18n="contact.title-suffix">Contato</span></h2>
+            <p class="text-muted-custom" data-i18n="contact.subtitle">Aberta a oportunidades, freelas e parcerias</p>
         </div>
         <div class="row g-5 justify-content-center">
             <div class="col-lg-4" data-aos="fade-right">
                 <div class="contact-info-card">
-                    <h6 class="mb-4">Informações de Contato</h6>
+                    <h6 class="mb-4" data-i18n="contact.info-title">Informações de Contato</h6>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
                         <div><small class="text-muted-custom">E-mail</small><p class="mb-0"><a href="mailto:paulaalessandra_rodrigues@outlook.com">paulaalessandra_rodrigues@outlook.com</a></p></div>
@@ -387,7 +469,7 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
-                        <div><small class="text-muted-custom">Localização</small><p class="mb-0">Tubarão – SC, Brasil</p></div>
+                        <div><small class="text-muted-custom" data-i18n="contact.location-label">Localização</small><p class="mb-0" data-i18n="contact.location-value">Tubarão – SC, Brasil</p></div>
                     </div>
                     <div class="d-flex gap-2 mt-4 flex-wrap">
                         <a href="https://www.linkedin.com/in/paula-alessandra-rodrigues-dos-santos-57586759/" target="_blank" class="btn-primary-custom btn-sm-custom"><i class="bi bi-linkedin me-1"></i>LinkedIn</a>
@@ -400,8 +482,8 @@
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <div class="form-group-custom">
-                                <label for="nome">Nome <span class="required">*</span></label>
-                                <input type="text" id="nome" name="nome" class="form-control-custom" placeholder="Seu nome completo" autocomplete="name">
+                                <label for="nome"><span data-i18n="contact.form-name">Nome</span> <span class="required">*</span></label>
+                                <input type="text" id="nome" name="nome" class="form-control-custom" data-i18n-placeholder="contact.ph-name" placeholder="Seu nome completo" autocomplete="name">
                                 <span class="error-msg" id="erro-nome"></span>
                             </div>
                         </div>
@@ -414,21 +496,21 @@
                         </div>
                         <div class="col-12">
                             <div class="form-group-custom">
-                                <label for="assunto">Assunto</label>
-                                <input type="text" id="assunto" name="assunto" class="form-control-custom" placeholder="Como posso te ajudar?">
+                                <label for="assunto"><span data-i18n="contact.form-subject">Assunto</span></label>
+                                <input type="text" id="assunto" name="assunto" class="form-control-custom" data-i18n-placeholder="contact.ph-subject" placeholder="Como posso te ajudar?">
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-group-custom">
-                                <label for="mensagem">Mensagem <span class="required">*</span></label>
-                                <textarea id="mensagem" name="mensagem" class="form-control-custom" rows="5" placeholder="Sua mensagem..."></textarea>
+                                <label for="mensagem"><span data-i18n="contact.form-message">Mensagem</span> <span class="required">*</span></label>
+                                <textarea id="mensagem" name="mensagem" class="form-control-custom" rows="5" data-i18n-placeholder="contact.ph-message" placeholder="Sua mensagem..."></textarea>
                                 <span class="error-msg" id="erro-mensagem"></span>
                             </div>
                         </div>
                         <div class="col-12">
                             <button type="submit" class="btn-primary-custom w-100" id="btn-submit">
-                                <span class="btn-text">Enviar Mensagem <i class="bi bi-send-fill ms-1"></i></span>
-                                <span class="btn-loading d-none">Enviando... <i class="bi bi-hourglass-split ms-1"></i></span>
+                                <span class="btn-text"><span data-i18n="contact.btn-send">Enviar Mensagem</span> <i class="bi bi-send-fill ms-1"></i></span>
+                                <span class="btn-loading d-none"><span data-i18n="contact.btn-sending">Enviando...</span> <i class="bi bi-hourglass-split ms-1"></i></span>
                             </button>
                         </div>
                     </div>
@@ -444,9 +526,9 @@
 <div class="modal-overlay" id="modal-sucesso">
     <div class="modal-box">
         <div class="modal-icon">✅</div>
-        <h5>Mensagem enviada!</h5>
-        <p class="text-muted-custom">Obrigada pelo contato. Retorno em breve!</p>
-        <button class="btn-primary-custom mt-2" id="btn-fechar">Fechar</button>
+        <h5 data-i18n="modal.title">Mensagem enviada!</h5>
+        <p class="text-muted-custom" data-i18n="modal.desc">Obrigada pelo contato. Retorno em breve!</p>
+        <button class="btn-primary-custom mt-2" id="btn-fechar" data-i18n="modal.close">Fechar</button>
     </div>
 </div>
 
@@ -455,7 +537,7 @@
     <div class="container">
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
             <span class="footer-brand">&lt;Paula<span class="brand-dot">.</span>dev/&gt;</span>
-            <p class="mb-0 text-muted-custom small">&copy; 2025 Paula Alessandra. Todos os direitos reservados.</p>
+            <p class="mb-0 text-muted-custom small">&copy; 2025 Paula Alessandra. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
             <div class="d-flex gap-3">
                 <a href="https://www.linkedin.com/in/paula-alessandra-rodrigues-dos-santos-57586759/" target="_blank" class="footer-link"><i class="bi bi-linkedin"></i></a>
                 <a href="https://github.com/paulaalessandrars" target="_blank" class="footer-link"><i class="bi bi-github"></i></a>
@@ -472,6 +554,7 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="assets/js/theme.js"></script>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/ui.js"></script>
 <script src="assets/js/animations.js"></script>
 <script src="assets/js/portfolio.js"></script>

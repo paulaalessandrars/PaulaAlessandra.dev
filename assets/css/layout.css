@@ -82,6 +82,29 @@
   transform: rotate(20deg);
 }
 
+.lang-toggle {
+  background: rgba(var(--color-primary-rgb), 0.08);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.2);
+  color: var(--color-primary);
+  border-radius: 6px;
+  padding: 0 10px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: background var(--tr), border-color var(--tr), transform var(--tr);
+}
+.lang-toggle:hover {
+  background: rgba(var(--color-primary-rgb), 0.18);
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+}
+
 .hamburger {
   background: none;
   border: none;
@@ -300,6 +323,154 @@
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(var(--color-primary-rgb), 0.45);
 }
+
+/* ── Hero Grid (two-column) ────────────────────────────────── */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* ── Open-to-work badge ────────────────────────────────────── */
+.otw-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #3fb950;
+  background: rgba(63, 185, 80, 0.1);
+  border: 1px solid rgba(63, 185, 80, 0.3);
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+.otw-dot {
+  width: 8px; height: 8px;
+  background: #3fb950;
+  border-radius: 50%;
+  animation: pulse-green 2s infinite;
+  flex-shrink: 0;
+}
+.otw-value { color: #79c0ff; }
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0   rgba(63, 185, 80, 0.5); }
+  50%       { box-shadow: 0 0 0 6px rgba(63, 185, 80, 0);   }
+}
+
+/* ── CV download button ────────────────────────────────────── */
+.btn-cv-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: rgba(var(--color-accent-rgb), 0.08);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.3);
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background var(--tr), border-color var(--tr), transform var(--tr), box-shadow var(--tr);
+  white-space: nowrap;
+}
+.btn-cv-custom:hover {
+  background: rgba(var(--color-accent-rgb), 0.18);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(var(--color-accent-rgb), 0.2);
+}
+
+/* ── Code Terminal ─────────────────────────────────────────── */
+.code-terminal {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.04);
+  max-width: 520px;
+  width: 100%;
+  justify-self: center;
+}
+.light-theme .code-terminal {
+  background: #1c2128;
+  border-color: #373e47;
+}
+
+.terminal-header {
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.light-theme .terminal-header {
+  background: #2d333b;
+  border-color: #373e47;
+}
+
+.terminal-dots { display: flex; gap: 7px; align-items: center; }
+.dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+}
+.dot-red    { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green  { background: #28c840; }
+
+.terminal-title {
+  flex: 1;
+  text-align: center;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  color: #8b949e;
+}
+.terminal-lang {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #58a6ff;
+  background: rgba(88, 166, 255, 0.12);
+  border: 1px solid rgba(88, 166, 255, 0.25);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.terminal-body { padding: 20px 22px; min-height: 260px; }
+.terminal-code {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.78rem;
+  line-height: 1.75;
+  color: #e6edf3;
+  white-space: pre;
+  overflow-x: auto;
+}
+.terminal-code code { background: none; padding: 0; font-size: inherit; }
+
+/* Terminal syntax colours */
+.t-comment    { color: #8b949e; }
+.t-keyword    { color: #ff7b72; }
+.t-class      { color: #ffa657; }
+.t-fn         { color: #d2a8ff; }
+.t-var        { color: #79c0ff; }
+.t-string     { color: #a5d6ff; }
+.t-annotation { color: #3fb950; }
+.t-num        { color: #79c0ff; }
+
+/* Terminal fade transition */
+.terminal-body { transition: opacity 0.3s ease; }
+.terminal-body.fading { opacity: 0; }
 
 /* ── AOS ───────────────────────────────────────────────────── */
 [data-aos] { pointer-events: none; }
