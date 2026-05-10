@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Paula Alessandra — Desenvolvedora Full-Stack, PHP, Java/Spring Boot, MySQL, JavaScript">
+    <title>Paula Alessandra | Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body class="dark-theme">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="#hero">
+            <span class="brand-bracket">&lt;</span>Paula<span class="brand-dot">.</span>dev<span class="brand-bracket">/&gt;</span>
+        </a>
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+            <button class="theme-toggle" id="theme-toggle-mobile" aria-label="Alternar tema">
+                <i class="bi bi-moon-fill" id="icon-moon-mobile"></i>
+                <i class="bi bi-sun-fill d-none" id="icon-sun-mobile"></i>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav-collapse" id="nav-menu">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 mb-3 mb-lg-0">
+                <li class="nav-item"><a href="#sobre"       class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="#stack"       class="nav-link">Stack</a></li>
+                <li class="nav-item"><a href="#experiencia" class="nav-link">Experiência</a></li>
+                <li class="nav-item"><a href="#portfolio"   class="nav-link">Portfólio</a></li>
+                <li class="nav-item"><a href="#contato"     class="nav-link nav-cta">Contato</a></li>
+            </ul>
+            <button class="theme-toggle d-none d-lg-flex" id="theme-toggle" aria-label="Alternar tema">
+                <i class="bi bi-moon-fill" id="icon-moon"></i>
+                <i class="bi bi-sun-fill d-none" id="icon-sun"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section id="hero" class="hero-section">
+    <div id="particles-js"></div>
+    <div class="container hero-container">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="900">
+            <h1 class="hero-name">Paula <span class="text-gradient">Alessandra</span></h1>
+            <h2 class="hero-typed"><span id="typed"></span></h2>
+            <p class="hero-desc">
+                Desenvolvedora Full-Stack com formação técnica em Eletrotécnica e Telecom.
+                Trabalho com <strong>PHP</strong>, <strong>Java/Spring Boot</strong>,
+                <strong>MySQL</strong> e <strong>JavaScript</strong>, com
+                <strong>35+ projetos entregues</strong> em sistemas de gestão, APIs e integrações.
+            </p>
+            <div class="d-flex gap-3 flex-wrap mb-4">
+                <a href="#portfolio" class="btn-primary-custom">Ver Projetos <i class="bi bi-arrow-right ms-1"></i></a>
+                <a href="#contato"   class="btn-outline-custom">Falar Comigo <i class="bi bi-chat-dots ms-1"></i></a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://www.linkedin.com/in/paula-alessandra-rodrigues-dos-santos-57586759/" target="_blank" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/paulaalessandrars" target="_blank" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                <a href="mailto:paulaalessandra_rodrigues@outlook.com" class="social-link" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+                <a href="https://wa.me/+5551981368934" target="_blank" class="social-link" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator"><span></span></div>
+</section>
+
+<!-- STATS -->
+<section id="stats" class="stats-section">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <div class="col-6 col-md-3" data-aos="fade-up">
+                <div class="stat-card text-center">
+                    <div class="stat-icon"><i class="bi bi-code-slash"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="35">0</span>+</div>
+                    <div class="stat-label">Projetos Entregues</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-card text-center">
+                    <div class="stat-icon"><i class="bi bi-calendar2-check"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="1">0</span>+</div>
+                    <div class="stat-label">Ano como Dev Freelancer</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-card text-center">
+                    <div class="stat-icon"><i class="bi bi-stack"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="8">0</span>+</div>
+                    <div class="stat-label">Tecnologias</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-card text-center">
+                    <div class="stat-icon"><i class="bi bi-trophy"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="100">0</span>%</div>
+                    <div class="stat-label">Comprometimento</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="section-pad">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-4 text-center" data-aos="fade-right">
+                <div class="avatar-wrapper mx-auto">
+                    <img src="assets/img/paula.jpg" alt="Paula Alessandra" class="avatar-img">
+                </div>
+                <div class="mt-4 d-flex flex-column align-items-center gap-2">
+                    <div class="info-pill"><i class="bi bi-geo-alt-fill me-2"></i>Tubarão – SC</div>
+                    <div class="info-pill"><i class="bi bi-mortarboard-fill me-2"></i>ADS · Uninter (2022–2026)</div>
+                    <div class="info-pill"><i class="bi bi-lightning-charge-fill me-2"></i>Técnico em Eletrotécnica</div>
+                </div>
+            </div>
+            <div class="col-lg-8" data-aos="fade-left" data-aos-delay="100">
+                <div class="section-label">Sobre mim</div>
+                <h2 class="section-title">Full-Stack Developer &amp; <span class="text-gradient">Systems Analyst</span></h2>
+                <p class="text-muted-custom mb-3">
+                    Desenvolvedora Full-Stack com base técnica em Eletrotécnica e formação em Análise e Desenvolvimento de Sistemas.
+                    Atuo no desenvolvimento de sistemas web completos com foco em performance, arquitetura limpa e entrega de valor real.
+                </p>
+                <p class="text-muted-custom mb-4">
+                    Com <strong class="text-highlight">35+ projetos em produção</strong>, tenho experiência em gamificação,
+                    dashboards financeiros, integrações de API, sistemas de pagamento,
+                    arquiteturas multi-tenant e migração de sistemas legados Java 8 → 21.
+                </p>
+                <div class="row g-2 mb-4">
+                    <div class="col-sm-6"><div class="about-feature"><i class="bi bi-check2-circle me-2"></i>PHP · Java · Spring Boot</div></div>
+                    <div class="col-sm-6"><div class="about-feature"><i class="bi bi-check2-circle me-2"></i>MySQL · MariaDB</div></div>
+                    <div class="col-sm-6"><div class="about-feature"><i class="bi bi-check2-circle me-2"></i>JavaScript · Bootstrap</div></div>
+                    <div class="col-sm-6"><div class="about-feature"><i class="bi bi-check2-circle me-2"></i>REST APIs · MVC · Clean Code</div></div>
+                </div>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="#portfolio" class="btn-primary-custom">Ver Portfólio</a>
+                    <a href="#contato"   class="btn-outline-custom">Entre em Contato</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STACK -->
+<section id="stack" class="section-pad bg-alt">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label">Tecnologias</div>
+            <h2 class="section-title">Minha <span class="text-gradient">Stack</span></h2>
+            <p class="text-muted-custom">Ferramentas e tecnologias que uso no dia a dia</p>
+        </div>
+        <div class="stack-group mb-5" data-aos="fade-up">
+            <h6 class="stack-group-label"><i class="bi bi-server me-2"></i>Backend</h6>
+            <div class="row g-3">
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-plain.svg" alt="PHP"><span>PHP</span></div></div>
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"><span>Java</span></div></div>
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring Boot"><span>Spring Boot</span></div></div>
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"><span>Python</span></div></div>
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div></div>
+            </div>
+        </div>
+        <div class="stack-group mb-5" data-aos="fade-up">
+            <h6 class="stack-group-label"><i class="bi bi-palette2 me-2"></i>Frontend</h6>
+            <div class="row g-3">
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"><span>HTML5</span></div></div>
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"><span>CSS3</span></div></div>
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div></div>
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"><span>Bootstrap</span></div></div>
+            </div>
+        </div>
+        <div class="stack-group mb-5" data-aos="fade-up">
+            <h6 class="stack-group-label"><i class="bi bi-database me-2"></i>Banco de Dados</h6>
+            <div class="row g-3">
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div></div>
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg" alt="MariaDB"><span>MariaDB</span></div></div>
+            </div>
+        </div>
+        <div class="stack-group" data-aos="fade-up">
+            <h6 class="stack-group-label"><i class="bi bi-tools me-2"></i>Ferramentas</h6>
+            <div class="row g-3">
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"><span>Git</span></div></div>
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" class="icon-invert"><span>GitHub</span></div></div>
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VSCode"><span>VSCode</span></div></div>
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg" alt="Eclipse"><span>Eclipse</span></div></div>
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma"><span>Figma</span></div></div>
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="Postman"><span>Postman</span></div></div>
+                <div class="col-4 col-sm-3 col-md-2"><div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="Jira"><span>Jira</span></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIÊNCIA -->
+<section id="experiencia" class="section-pad">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label">Trajetória</div>
+            <h2 class="section-title">Formação &amp; <span class="text-gradient">Experiência</span></h2>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-5" data-aos="fade-right">
+                <h5 class="exp-col-title"><i class="bi bi-mortarboard-fill me-2"></i>Formação Acadêmica</h5>
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-dot tl-dot-primary"></div>
+                        <div class="tl-content">
+                            <span class="tl-period">2022 – 2026</span>
+                            <h6>Análise e Desenvolvimento de Sistemas</h6>
+                            <p class="text-muted-custom small mb-0">Uninter</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-content">
+                            <span class="tl-period">2008 – 2015</span>
+                            <h6>Técnico em Eletrotécnica</h6>
+                            <p class="text-muted-custom small mb-0">Fundação Liberato</p>
+                        </div>
+                    </div>
+                </div>
+                <h5 class="exp-col-title mt-5"><i class="bi bi-award-fill me-2"></i>Certificações</h5>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="cert-badge">Lógica de Programação</span>
+                    <span class="cert-badge">Pensamento Computacional</span>
+                    <span class="cert-badge">HTML &amp; CSS</span>
+                    <span class="cert-badge">JavaScript</span>
+                    <span class="cert-badge">Inteligência Artificial</span>
+                    <span class="cert-badge">Redes de Computadores</span>
+                    <span class="cert-badge">Sucesso do Cliente</span>
+                    <span class="cert-badge">Atendimento ao Cliente</span>
+                </div>
+            </div>
+            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
+                <h5 class="exp-col-title"><i class="bi bi-briefcase-fill me-2"></i>Experiência Profissional</h5>
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-dot tl-dot-accent"></div>
+                        <div class="tl-content tl-featured">
+                            <span class="tl-period">2025 – Atualmente</span>
+                            <h6>Desenvolvedora Full-Stack Freelancer</h6>
+                            <p class="text-muted-custom small">Projetos Independentes</p>
+                            <p class="text-muted-custom small">PHP, Java/Spring Boot, MySQL e JavaScript. 35+ projetos: gamificação, dashboards, APIs, pagamentos, UX/UI.</p>
+                            <div class="d-flex flex-wrap gap-1 mt-2">
+                                <span class="tl-tag">PHP</span><span class="tl-tag">Java</span>
+                                <span class="tl-tag">Spring Boot</span><span class="tl-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot tl-dot-primary"></div>
+                        <div class="tl-content">
+                            <span class="tl-period">2025 – Atualmente</span>
+                            <h6>Suporte Técnico N1 – Service Desk</h6>
+                            <p class="text-muted-custom small mb-0">Triagem de chamados e apoio em diagnósticos.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-content">
+                            <span class="tl-period">2024 – 2025</span>
+                            <h6>Suporte Técnico N1 – Helpdesk</h6>
+                            <p class="text-muted-custom small mb-0">UPVision</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-content">
+                            <span class="tl-period">2023 – 2024</span>
+                            <h6>Analista de Atendimento</h6>
+                            <p class="text-muted-custom small mb-0">Tmw Telecom</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-content">
+                            <span class="tl-period">2015 – 2023</span>
+                            <h6>Desenhista Projetista / Técnico de Telecom</h6>
+                            <p class="text-muted-custom small mb-0">Sinos Telecomunicações Ltda</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFÓLIO -->
+<section id="portfolio" class="section-pad bg-alt">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label">Trabalhos</div>
+            <h2 class="section-title">Meu <span class="text-gradient">Portfólio</span></h2>
+            <p class="text-muted-custom">35+ projetos entregues em produção</p>
+        </div>
+        <div class="filtros-wrapper d-flex flex-wrap gap-2 justify-content-center mb-3" data-aos="fade-up">
+            <button class="filtro-btn active" data-filter="all">Todos</button>
+            <button class="filtro-btn" data-filter="gamificacao">🎮 Gamificação</button>
+            <button class="filtro-btn" data-filter="obras">🏗️ Obras</button>
+            <button class="filtro-btn" data-filter="relatorios">📊 Relatórios</button>
+            <button class="filtro-btn" data-filter="frontend">🎨 Frontend/UX</button>
+            <button class="filtro-btn" data-filter="backend">⚙️ Backend/API</button>
+            <button class="filtro-btn" data-filter="pagamentos">💳 Pagamentos</button>
+            <button class="filtro-btn" data-filter="arquitetura">🔐 Arquitetura</button>
+        </div>
+        <p class="text-center text-muted-custom small mb-4" id="portfolio-counter"></p>
+        <div class="row g-4" id="portfolio-grid">
+            <!-- GAMIFICAÇÃO -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🎯</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span></div></div><h6>Motor de Saldo Dinâmico e Inventário FIFO</h6><p class="text-muted-custom small">Motor de cálculo de saldo com consumo FIFO, abatendo pontos dos registros mais antigos com histórico de auditoria completo.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🛒</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span><span class="ptag">E-commerce</span></div></div><h6>Integração de E-commerce ao Ledger de Pontos</h6><p class="text-muted-custom small">Migração do resgate de pontos para arquitetura centralizada de ledger com débito transacional automático.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📦</span><div class="project-tags"><span class="ptag">SQL</span><span class="ptag">PHP</span></div></div><h6>Migração de Dados para Sistema de Pontuação</h6><p class="text-muted-custom small">Migração da lógica de pontuação para arquitetura centralizada com refatoração do modelo de dados legado.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🏗️</span><div class="project-tags"><span class="ptag">SQL</span><span class="ptag">PHP</span><span class="ptag">Full-stack</span></div></div><h6>Arquitetura do Sistema Centralizado de Pontuação</h6><p class="text-muted-custom small">Ledger central consolidando registros de pontos de diferentes origens com restrições de integridade.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">⚙️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span></div></div><h6>Expansão do Módulo de Configurações de Gamificação</h6><p class="text-muted-custom small">Parâmetros de pontuação dinâmica por tipo de cadastro sem re-deploy.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="gamificacao"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💡</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">JavaScript</span></div></div><h6>Sistema Dinâmico de Pontuação para Profissionais</h6><p class="text-muted-custom small">Full-stack para atribuição flexível e personalizável de pontos com interface de gerenciamento otimizada.</p></div></div>
+            <!-- OBRAS -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="obras"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📊</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">JavaScript</span><span class="ptag">SQL</span></div></div><h6>Dashboard de KPIs em Obras</h6><p class="text-muted-custom small">Indicadores de engajamento com edição inline de status e prazos sem recarregar a página.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="obras"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔍</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span><span class="ptag">Lightbox</span></div></div><h6>Filtros Avançados e UX no Módulo de Obras</h6><p class="text-muted-custom small">Filtros de escopo, preenchimento automático e visualizador de imagens integrado.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="obras"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🏷️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL N:N</span></div></div><h6>Categorização Multi-Segmento para Parceiros</h6><p class="text-muted-custom small">Múltiplos segmentos por perfil via N:N com gestão completa e integridade referencial.</p></div></div>
+            <!-- RELATÓRIOS -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="relatorios"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📋</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span></div></div><h6>Rastreabilidade de Atendimento em Relatórios Financeiros</h6><p class="text-muted-custom small">Identificação de vendas assistidas por atendente com coluna hierárquica para comissões.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="relatorios"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📈</span><div class="project-tags"><span class="ptag">SQL Avançado</span><span class="ptag">PHP</span></div></div><h6>Painel Analítico de Monitoramento</h6><p class="text-muted-custom small">Consulta com múltiplos JOINs e agregações para dados de reservas em tempo real.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="relatorios"><div class="project-card h-100"><div class="project-header"><span class="project-icon">⚡</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span><span class="ptag">Otimização</span></div></div><h6>Otimização de Performance em Filtros</h6><p class="text-muted-custom small">Refatoração sem funções de alto custo no banco, mantendo performance estável em produção.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="relatorios"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🗂️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MVC</span></div></div><h6>Desenvolvimento Modular de Relatório Financeiro</h6><p class="text-muted-custom small">Novo módulo com camadas Controller e Repository isoladas por adaptação de módulo existente.</p></div></div>
+            <!-- FRONTEND/UX -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔍</span><div class="project-tags"><span class="ptag">JavaScript</span><span class="ptag">Ajax</span><span class="ptag">PHP</span></div></div><h6>Busca Dinâmica com Autocomplete</h6><p class="text-muted-custom small">Autocomplete via Ajax com redirecionamento automático pós-cadastro e correções de responsividade.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📱</span><div class="project-tags"><span class="ptag">JavaScript</span><span class="ptag">CSS</span><span class="ptag">UX/UI</span></div></div><h6>Refatoração de Interface para Mobile</h6><p class="text-muted-custom small">Layout Mobile-First em duas colunas eliminando rolagem horizontal em tela operacional crítica.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💬</span><div class="project-tags"><span class="ptag">JavaScript</span><span class="ptag">UX</span></div></div><h6>Geração Dinâmica de Mensagens de Confirmação</h6><p class="text-muted-custom small">Algoritmo que gera mensagens formatadas para WhatsApp eliminando preenchimento manual.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🗺️</span><div class="project-tags"><span class="ptag">JavaScript</span><span class="ptag">Google Maps</span></div></div><h6>Integração com Google Maps</h6><p class="text-muted-custom small">Conversão automática de endereços em links Google Maps com correções de responsividade.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🛒</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">JavaScript</span></div></div><h6>CRM para Recuperação de Vendas</h6><p class="text-muted-custom small">Reengajamento de clientes com pedidos abandonados via e-mails personalizados direto do relatório.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="frontend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💰</span><div class="project-tags"><span class="ptag">Electron</span><span class="ptag">JavaScript</span></div></div><h6>Finance Controller</h6><p class="text-muted-custom small">App desktop de controle financeiro com gráficos, importação de planilhas Excel e notificações toast.</p></div></div>
+            <!-- BACKEND/API -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔒</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">Null Safety</span></div></div><h6>Depuração em Módulo de Autenticação</h6><p class="text-muted-custom small">Análise de logs críticos com tratamento defensivo e fallbacks que garantem estabilidade.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">☕</span><div class="project-tags"><span class="ptag">Java 21</span><span class="ptag">ERP</span></div></div><h6>Migração Java 8 → 21: Integração ERP</h6><p class="text-muted-custom small">Migração completa para Java 21 LTS com isolamento de ambientes de teste.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📧</span><div class="project-tags"><span class="ptag">Java 21</span><span class="ptag">Maven</span></div></div><h6>Migração Java 8 → 21: E-mails Transacionais</h6><p class="text-muted-custom small">Modernização de microsserviço com estratégia eliminando disparo acidental em produção.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📬</span><div class="project-tags"><span class="ptag">Java</span><span class="ptag">AWS SES</span></div></div><h6>Integração de E-mail com AWS SES</h6><p class="text-muted-custom small">Arquitetura de notificações com Amazon SES segregando métricas por aplicação. POC validada.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💲</span><div class="project-tags"><span class="ptag">Java</span><span class="ptag">Spring Boot</span><span class="ptag">REST</span></div></div><h6>Precificação Dinâmica Temporal em API REST</h6><p class="text-muted-custom small">API que calcula preço vigente ou futuro por data, com regra encapsulada no domínio.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">⏰</span><div class="project-tags"><span class="ptag">Java</span><span class="ptag">@Scheduled</span></div></div><h6>Automação de Expiração de Vendas</h6><p class="text-muted-custom small">Rotina com lógica condicional de expiração por período e consultas otimizadas por criticidade.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="backend"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🐛</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MariaDB</span></div></div><h6>Correção de Bugs Críticos em Filtro de Vendas</h6><p class="text-muted-custom small">Correção de conflito de collation e vulnerabilidade SQL com migração para prepared statements.</p></div></div>
+            <!-- PAGAMENTOS -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">💰</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">JavaScript</span></div></div><h6>Gerenciamento de Meios de Pagamento</h6><p class="text-muted-custom small">Vínculo relacional entre métodos e formas de pagamento com lógica condicional de interface.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🖥️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">CRUD</span></div></div><h6>Módulo de Terminais de Pagamento (TEF)</h6><p class="text-muted-custom small">CRUD completo para terminais físicos com inativação lógica preservando histórico.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">✏️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">JavaScript</span></div></div><h6>Edição de Itens com Controle de Desconto</h6><p class="text-muted-custom small">Recálculo em tempo real com persistência em múltiplas tabelas e auditoria completa.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📅</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span></div></div><h6>Sistema de Reservas com Pagamento Antecipado</h6><p class="text-muted-custom small">Regras de pagamento antecipado em datas específicas com controle de capacidade por período.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="pagamentos"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🏦</span><div class="project-tags"><span class="ptag">PHP MVC</span><span class="ptag">Multi-tenant</span></div></div><h6>Refatoração do Módulo de Caixas</h6><p class="text-muted-custom small">Desacoplamento de provedor com isolamento de dados por tenant em todas as operações.</p></div></div>
+            <!-- ARQUITETURA -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔑</span><div class="project-tags"><span class="ptag">Java/PHP</span><span class="ptag">Auth</span></div></div><h6>Fluxo Dinâmico de Recuperação de Acesso</h6><p class="text-muted-custom small">Módulo de recuperação de senhas para múltiplos identificadores por configuração de cliente.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🔐</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">Multi-tenant</span></div></div><h6>Escopo de Acesso por Tenant</h6><p class="text-muted-custom small">Filtros garantindo que cada cliente acesse apenas seus próprios dados em todas as camadas.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">📡</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">SQL</span></div></div><h6>Módulo de Canais de Venda com Unicidade Condicional</h6><p class="text-muted-custom small">Validação de unicidade condicional bloqueando duplicatas para tipos operacionais específicos.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🌍</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">JavaScript</span></div></div><h6>Cadastro Internacional no PDV</h6><p class="text-muted-custom small">Campos dinâmicos para clientes nacionais e estrangeiros com alternância automática de validações.</p></div></div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="arquitetura"><div class="project-card h-100"><div class="project-header"><span class="project-icon">🖥️</span><div class="project-tags"><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">CRUD</span></div></div><h6>Módulo de Gerenciamento de Recursos Físicos</h6><p class="text-muted-custom small">Gestão de ativos físicos com controle de status e integração via chave estrangeira.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="section-pad">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label">Vamos conversar</div>
+            <h2 class="section-title">Entre em <span class="text-gradient">Contato</span></h2>
+            <p class="text-muted-custom">Aberta a oportunidades, freelas e parcerias</p>
+        </div>
+        <div class="row g-5 justify-content-center">
+            <div class="col-lg-4" data-aos="fade-right">
+                <div class="contact-info-card">
+                    <h6 class="mb-4">Informações de Contato</h6>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
+                        <div><small class="text-muted-custom">E-mail</small><p class="mb-0"><a href="mailto:paulaalessandra_rodrigues@outlook.com">paulaalessandra_rodrigues@outlook.com</a></p></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="bi bi-whatsapp"></i></div>
+                        <div><small class="text-muted-custom">WhatsApp</small><p class="mb-0"><a href="https://wa.me/+5551981368934" target="_blank">(51) 98136-8934</a></p></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <div><small class="text-muted-custom">Localização</small><p class="mb-0">Tubarão – SC, Brasil</p></div>
+                    </div>
+                    <div class="d-flex gap-2 mt-4 flex-wrap">
+                        <a href="https://www.linkedin.com/in/paula-alessandra-rodrigues-dos-santos-57586759/" target="_blank" class="btn-primary-custom btn-sm-custom"><i class="bi bi-linkedin me-1"></i>LinkedIn</a>
+                        <a href="https://github.com/paulaalessandrars" target="_blank" class="btn-outline-custom btn-sm-custom"><i class="bi bi-github me-1"></i>GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
+                <form class="contact-form" id="contact-form" novalidate>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="form-group-custom">
+                                <label for="nome">Nome <span class="required">*</span></label>
+                                <input type="text" id="nome" name="nome" class="form-control-custom" placeholder="Seu nome completo" autocomplete="name">
+                                <span class="error-msg" id="erro-nome"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group-custom">
+                                <label for="email">E-mail <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" class="form-control-custom" placeholder="seu@email.com" autocomplete="email">
+                                <span class="error-msg" id="erro-email"></span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group-custom">
+                                <label for="assunto">Assunto</label>
+                                <input type="text" id="assunto" name="assunto" class="form-control-custom" placeholder="Como posso te ajudar?">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group-custom">
+                                <label for="mensagem">Mensagem <span class="required">*</span></label>
+                                <textarea id="mensagem" name="mensagem" class="form-control-custom" rows="5" placeholder="Sua mensagem..."></textarea>
+                                <span class="error-msg" id="erro-mensagem"></span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn-primary-custom w-100" id="btn-submit">
+                                <span class="btn-text">Enviar Mensagem <i class="bi bi-send-fill ms-1"></i></span>
+                                <span class="btn-loading d-none">Enviando... <i class="bi bi-hourglass-split ms-1"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-sucesso">
+    <div class="modal-box">
+        <div class="modal-icon">✅</div>
+        <h5>Mensagem enviada!</h5>
+        <p class="text-muted-custom">Obrigada pelo contato. Retorno em breve!</p>
+        <button class="btn-primary-custom mt-2" id="btn-fechar">Fechar</button>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <span class="footer-brand">&lt;Paula<span class="brand-dot">.</span>dev/&gt;</span>
+            <p class="mb-0 text-muted-custom small">&copy; 2025 Paula Alessandra. Todos os direitos reservados.</p>
+            <div class="d-flex gap-3">
+                <a href="https://www.linkedin.com/in/paula-alessandra-rodrigues-dos-santos-57586759/" target="_blank" class="footer-link"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/paulaalessandrars" target="_blank" class="footer-link"><i class="bi bi-github"></i></a>
+                <a href="mailto:paulaalessandra_rodrigues@outlook.com" class="footer-link"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<button id="back-to-top" aria-label="Voltar ao topo"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/portfolio.js"></script>
+<script src="assets/js/contact.js"></script>
+</body>
+</html>
