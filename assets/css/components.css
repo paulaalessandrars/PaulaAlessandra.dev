@@ -276,6 +276,11 @@
     rgba(63, 185, 80, 0.12) 0%,
     rgba(var(--color-primary-rgb), 0.05) 100%);
 }
+.featured-card-header--vue {
+  background: linear-gradient(135deg,
+    rgba(66, 211, 146, 0.14) 0%,
+    rgba(65, 184, 131, 0.06) 100%);
+}
 
 .featured-icon-wrap { display: inline-flex; }
 .featured-icon { font-size: 2rem; line-height: 1; }

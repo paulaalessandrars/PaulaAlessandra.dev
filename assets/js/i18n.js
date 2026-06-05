@@ -9,7 +9,7 @@ const translations = {
     'nav.contact':     'Contato',
 
     /* Hero */
-    'hero.desc':         'Desenvolvedora Full-Stack com formação técnica em Eletrotécnica e Telecom. Trabalho com <strong>PHP</strong>, <strong>Java/Spring Boot</strong>, <strong>MySQL</strong> e <strong>JavaScript</strong>, com <strong>35+ projetos entregues</strong> em sistemas de gestão, APIs e integrações.',
+    'hero.desc':         'Desenvolvedora Full-Stack com formação técnica em Eletrotécnica e Telecom. Trabalho com <strong>PHP</strong>, <strong>Laravel</strong>, <strong>Java/Spring Boot</strong>, <strong>Vue.js</strong> e <strong>MySQL/PostgreSQL</strong>, com <strong>36+ projetos entregues</strong> em sistemas de gestão, APIs e integrações.',
     'hero.btn-projects': 'Ver Projetos',
     'hero.btn-contact':  'Falar Comigo',
 
@@ -25,7 +25,7 @@ const translations = {
     'about.degree':      'ADS · Uninter (2022–2026)',
     'about.tech-course': 'Técnico em Eletrotécnica',
     'about.p1':          'Desenvolvedora Full-Stack com base técnica em Eletrotécnica e formação em Análise e Desenvolvimento de Sistemas. Atuo no desenvolvimento de sistemas web completos com foco em performance, arquitetura limpa e entrega de valor real.',
-    'about.p2':          'Com <strong class="text-highlight">35+ projetos em produção</strong>, tenho experiência em gamificação, dashboards financeiros, integrações de API, sistemas de pagamento, arquiteturas multi-tenant e migração de sistemas legados Java 8 → 21.',
+    'about.p2':          'Com <strong class="text-highlight">36+ projetos em produção</strong>, tenho experiência em gamificação, dashboards financeiros, integrações de API, sistemas de pagamento, arquiteturas multi-tenant e migração de sistemas legados Java 8 → 21.',
     'about.btn-portfolio': 'Ver Portfólio',
     'about.btn-contact':   'Entre em Contato',
 
@@ -48,7 +48,7 @@ const translations = {
     'exp.job1-period':  '2025 – Atualmente',
     'exp.job1-title':   'Desenvolvedora Full-Stack Freelancer',
     'exp.job1-company': 'Projetos Independentes',
-    'exp.job1-desc':    'PHP, Java/Spring Boot, MySQL e JavaScript. 35+ projetos: gamificação, dashboards, APIs, pagamentos, UX/UI.',
+    'exp.job1-desc':    'PHP, Laravel, Java/Spring Boot, Vue.js e MySQL. 36+ projetos: gamificação, dashboards, APIs, pagamentos, UX/UI.',
     'exp.job2-period':  '2025 – Atualmente',
     'exp.job2-title':   'Suporte Técnico – Service Desk',
     'exp.job2-desc':    'Triagem de chamados e apoio em diagnósticos.',
@@ -75,15 +75,15 @@ const translations = {
     'feat.c2-cat':   'Backend / Migração',
     'feat.c2-title': 'Migração Java 8 → 21: Integração ERP',
     'feat.c2-desc':  'Migração completa de microsserviço legado para Java 21 LTS com isolamento de ambientes de teste, garantindo zero impacto em produção durante a transição.',
-    'feat.c3-cat':   'Pagamentos',
-    'feat.c3-title': 'Sistema de Reservas com Pagamento Antecipado',
-    'feat.c3-desc':  'Regras de pagamento antecipado configuráveis por datas específicas com controle de capacidade por período e isolamento de dados por tenant.',
+    'feat.c3-cat':   'Full-Stack · Open Source',
+    'feat.c3-title': 'Portal Web HeroForce',
+    'feat.c3-desc':  'Portal full-stack de gestão de missões com Laravel 11, Vue.js 3, PostgreSQL e Docker. JWT, controle de acesso por roles, CI/CD com GitHub Actions e deploy em Railway + Vercel.',
 
     /* Portfolio section */
     'port.label':        'Trabalhos',
     'port.title-prefix': 'Meu',
     'port.title-suffix': 'Portfólio',
-    'port.subtitle':     '35+ projetos entregues em produção',
+    'port.subtitle':     '36+ projetos entregues em produção',
 
     /* Filters */
     'filter.all':         'Todos',
@@ -181,6 +181,10 @@ const translations = {
     'p-a5.t': 'Módulo de Gerenciamento de Recursos Físicos',
     'p-a5.d': 'Gestão de ativos físicos com controle de status e integração via chave estrangeira.',
 
+    /* Portfolio items — Open Source */
+    'p-hf1.t': 'Portal Web HeroForce',
+    'p-hf1.d': 'Portal full-stack de gestão de missões com Laravel 11, Vue.js 3, PostgreSQL e Docker. JWT, controle de acesso por roles, CI/CD com GitHub Actions e deploy em Railway + Vercel.',
+
     /* Contact */
     'contact.label':          'Vamos conversar',
     'contact.title-prefix':   'Entre em',
@@ -215,7 +219,7 @@ const translations = {
     'nav.contact':     'Contact',
 
     /* Hero */
-    'hero.desc':         'Full-Stack Developer with a technical background in Electrical Engineering and Telecom. I work with <strong>PHP</strong>, <strong>Java/Spring Boot</strong>, <strong>MySQL</strong> and <strong>JavaScript</strong>, with <strong>35+ projects delivered</strong> in management systems, APIs and integrations.',
+    'hero.desc':         'Full-Stack Developer with a technical background in Electrical Engineering and Telecom. I work with <strong>PHP</strong>, <strong>Laravel</strong>, <strong>Java/Spring Boot</strong>, <strong>Vue.js</strong> and <strong>MySQL/PostgreSQL</strong>, with <strong>36+ projects delivered</strong> in management systems, APIs and integrations.',
     'hero.btn-projects': 'View Projects',
     'hero.btn-contact':  'Get in Touch',
 
@@ -231,7 +235,7 @@ const translations = {
     'about.degree':      'IT Systems · Uninter (2022–2026)',
     'about.tech-course': 'Electrical Engineering Technician',
     'about.p1':          'Full-Stack Developer with a technical background in Electrical Engineering and a degree in Systems Analysis and Development. I build complete web systems focused on performance, clean architecture and real value delivery.',
-    'about.p2':          'With <strong class="text-highlight">35+ projects in production</strong>, I have experience in gamification, financial dashboards, API integrations, payment systems, multi-tenant architectures and Java 8 → 21 legacy migrations.',
+    'about.p2':          'With <strong class="text-highlight">36+ projects in production</strong>, I have experience in gamification, financial dashboards, API integrations, payment systems, multi-tenant architectures and Java 8 → 21 legacy migrations.',
     'about.btn-portfolio': 'View Portfolio',
     'about.btn-contact':   'Get in Touch',
 
@@ -254,7 +258,7 @@ const translations = {
     'exp.job1-period':  '2025 – Present',
     'exp.job1-title':   'Freelance Full-Stack Developer',
     'exp.job1-company': 'Independent Projects',
-    'exp.job1-desc':    'PHP, Java/Spring Boot, MySQL and JavaScript. 35+ projects: gamification, dashboards, APIs, payments, UX/UI.',
+    'exp.job1-desc':    'PHP, Laravel, Java/Spring Boot, Vue.js and MySQL. 36+ projects: gamification, dashboards, APIs, payments, UX/UI.',
     'exp.job2-period':  '2025 – Present',
     'exp.job2-title':   'Technical Support – Service Desk',
     'exp.job2-desc':    'Ticket triage and diagnostic support.',
@@ -281,15 +285,15 @@ const translations = {
     'feat.c2-cat':   'Backend / Migration',
     'feat.c2-title': 'Java 8 → 21 Migration: ERP Integration',
     'feat.c2-desc':  'Full legacy microservice migration to Java 21 LTS with test environment isolation, ensuring zero impact on production during the transition.',
-    'feat.c3-cat':   'Payments',
-    'feat.c3-title': 'Booking System with Advance Payment',
-    'feat.c3-desc':  'Configurable advance payment rules for specific dates with capacity control per period and per-tenant data isolation.',
+    'feat.c3-cat':   'Full-Stack · Open Source',
+    'feat.c3-title': 'HeroForce Web Portal',
+    'feat.c3-desc':  'Full-stack mission management portal with Laravel 11, Vue.js 3, PostgreSQL and Docker. JWT auth, role-based access, CI/CD via GitHub Actions, deployed on Railway + Vercel.',
 
     /* Portfolio section */
     'port.label':        'Work',
     'port.title-prefix': 'My',
     'port.title-suffix': 'Portfolio',
-    'port.subtitle':     '35+ projects delivered in production',
+    'port.subtitle':     '36+ projects delivered in production',
 
     /* Filters */
     'filter.all':         'All',
@@ -386,6 +390,10 @@ const translations = {
     'p-a4.d': 'Dynamic fields for domestic and foreign customers with automatic validation switching.',
     'p-a5.t': 'Physical Resource Management Module',
     'p-a5.d': 'Physical asset management with status control and foreign key integration.',
+
+    /* Portfolio items — Open Source */
+    'p-hf1.t': 'HeroForce Web Portal',
+    'p-hf1.d': 'Full-stack mission management portal with Laravel 11, Vue.js 3, PostgreSQL and Docker. JWT auth, role-based access, CI/CD via GitHub Actions, deployed on Railway + Vercel.',
 
     /* Contact */
     'contact.label':          "Let's Talk",
